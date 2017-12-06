@@ -7,6 +7,7 @@ import { ComponentDemo2Component } from './component-demo-2/component-demo-2.com
   imports: [
     CommonModule
   ],
-  declarations: [ComponentDemo1Component, ComponentDemo2Component]
+  declarations: [ComponentDemo1Component, ComponentDemo2Component],
+  exports: [ComponentDemo1Component, ComponentDemo2Component]
 })
 export class ComponentModule { }

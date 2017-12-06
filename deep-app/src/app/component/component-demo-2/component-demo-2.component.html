@@ -1,3 +1,11 @@
 <p>
   component-demo-2 works!
 </p>
+<ng-container *ngFor="let student of studentInfo">
+  <span>
+    {{student.id}}
+  </span>
+  <span>
+    {{student.name}}
+  </span>
+</ng-container>
