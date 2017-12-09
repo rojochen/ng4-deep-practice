@@ -1,4 +1,4 @@
-import { Component, OnInit, Input, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnChanges, OnDestroy, DoCheck } from '@angular/core';
+import { Component, OnInit, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnChanges, OnDestroy, DoCheck } from '@angular/core';
 import { LoggerService } from '../../service/logger.service';
 @Component({
   selector: 'app-life-parent',
