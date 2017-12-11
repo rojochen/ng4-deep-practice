@@ -6,6 +6,8 @@ import { InputParentComponent } from './input-parent/input-parent.component';
 import { InputChildComponent } from './input-child/input-child.component';
 import { OutputChildComponent } from './output-child/output-child.component';
 import { OutputParentComponent } from './output-parent/output-parent.component';
+import { ParentComponent } from './content-child/parent/parent.component';
+import { ChildComponent } from './content-child/child/child.component';
 
 @NgModule({
   imports: [
@@ -17,14 +19,18 @@ import { OutputParentComponent } from './output-parent/output-parent.component';
     InputParentComponent,
     InputChildComponent,
     OutputChildComponent,
-    OutputParentComponent],
+    OutputParentComponent,
+    ParentComponent,
+    ChildComponent],
   exports: [
     LifeParentComponent,
     LifeChildComponent,
     InputParentComponent,
     InputChildComponent,
     OutputParentComponent,
-    OutputChildComponent
+    OutputChildComponent,
+    ParentComponent,
+    ChildComponent
   ]
 })
 export class ComponentModule { }
