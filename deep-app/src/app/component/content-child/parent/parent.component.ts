@@ -1,6 +1,6 @@
 import { Component, OnInit, ContentChild } from '@angular/core';
 import { ChildComponent } from '../child/child.component';
-console.log('ChildComponent: ', ChildComponent);
+
 @Component({
   selector: 'app-parent',
   templateUrl: './parent.component.html',
