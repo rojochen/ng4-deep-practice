@@ -10,6 +10,8 @@ import { ParentComponent } from './content-child/parent/parent.component';
 import { ChildComponent } from './content-child/child/child.component';
 import { ViewChildParentComponent } from './view-child/view-child-parent/view-child-parent.component';
 import { ViewChildChildComponent } from './view-child/view-child-child/view-child-child.component';
+import { ViewChilderParentComponent } from './view-child/view-childer-parent/view-childer-parent.component';
+import { ViewChilderChildComponent } from './view-child/view-childer-child/view-childer-child.component';
 
 @NgModule({
   imports: [
@@ -25,7 +27,9 @@ import { ViewChildChildComponent } from './view-child/view-child-child/view-chil
     ParentComponent,
     ChildComponent,
     ViewChildParentComponent,
-    ViewChildChildComponent
+    ViewChildChildComponent,
+    ViewChilderParentComponent,
+    ViewChilderChildComponent
   ],
   exports: [
     LifeParentComponent,
@@ -37,7 +41,9 @@ import { ViewChildChildComponent } from './view-child/view-child-child/view-chil
     ParentComponent,
     ChildComponent,
     ViewChildParentComponent,
-    ViewChildChildComponent
+    ViewChildChildComponent,
+    ViewChilderParentComponent,
+    ViewChilderChildComponent
   ]
 })
 export class ComponentModule { }
