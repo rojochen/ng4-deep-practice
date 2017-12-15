@@ -1,0 +1,21 @@
+<div *ngIf="!TwID; else forminfo">
+  <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
+    <div class="form-container">
+      <div class="row columns">
+        <h1>My Reactive Form</h1>
+        <label>身分證字號：
+          <input type="text" formControlName="TwID">
+        </label>
+        <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">
+      </div>
+    </div>
+  </form>
+</div>
+
+<ng-template #forminfo>
+  <div class="form-container">
+    <div class="row columns">
+        <p>{{ TwID }}</p>
+    </div>
+  </div>
+</ng-template>
