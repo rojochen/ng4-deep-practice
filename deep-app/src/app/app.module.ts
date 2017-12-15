@@ -2,18 +2,19 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
-// import feature module
-import { ComponentModule } from './component/component.module';
-
 // import global service
 import { LoggerService } from './service/logger.service';
+// import feature module
+import { ComponentModule } from './component/component.module';
+import { FormModule } from './form/form.module';
 @NgModule({
   declarations: [
     AppComponent
   ],
   imports: [
     BrowserModule,
-    ComponentModule
+    ComponentModule,
+    FormModule
   ],
   providers: [LoggerService],
   bootstrap: [AppComponent]
