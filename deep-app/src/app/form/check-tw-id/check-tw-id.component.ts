@@ -54,8 +54,14 @@ export class CheckTwIdComponent implements OnInit {
       Validators.required,
       Validators.minLength(5)
     ]);
-    this.password = new FormControl('', [Validators.required, hasExclamationMark]);
-    this.identity = new FormControl('', [Validators.required, CheckTaiwanID]);
+    this.password = new FormControl('', [
+      Validators.required,
+      hasExclamationMark
+    ]);
+    this.identity = new FormControl('', [
+      Validators.required,
+      CheckTaiwanID
+    ]);
     this.loginForm = builder.group({
       username: this.username,
       password: this.password,
