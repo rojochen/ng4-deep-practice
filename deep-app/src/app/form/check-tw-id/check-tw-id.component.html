@@ -18,5 +18,14 @@
       <div [hidden]="!password.hasError('needsExclamation')">你的密碼必須要有一個驚嘆號</div>
     </div>
   </div>
+  <div>
+    <label for="identity">身分證號碼</label>
+    <input type="identity" name="identity" id="identity" [formControl]="identity">
+    <div [hidden]="identity.valid || identity.untouched">
+      <div>身分證有以下問題：</div>
+      <div [hidden]="!identity.hasError('required')">身分證 必填</div>
+      <div [hidden]="!identity.hasError('needsIdExclamation')">身分證 格式錯誤</div>
+    </div>
+  </div>
   <button type="submit" [disabled]="!loginForm.valid">Log In</button>
 </form>
