@@ -1,21 +1,22 @@
-<div *ngIf="!TwID; else forminfo">
-  <form [formGroup]="rForm" (ngSubmit)="addPost(rForm.value)">
-    <div class="form-container">
-      <div class="row columns">
-        <h1>My Reactive Form</h1>
-        <label>身分證字號：
-          <input type="text" formControlName="TwID">
-        </label>
-        <input type="submit" class="button expanded" value="Submit Form" [disabled]="!rForm.valid">
-      </div>
-    </div>
-  </form>
-</div>
+<form [formGroup]="loginForm" (ngSubmit)="login()">
 
-<ng-template #forminfo>
-  <div class="form-container">
-    <div class="row columns">
-        <p>{{ TwID }}</p>
+  <div>
+    <label for="username">username</label>
+    <input type="text" name="username" id="username" [formControl]="username">
+    <div [hidden]="username.valid || username.untouched">
+      <div>使用者名稱有以下問題：</div>
+      <div [hidden]="!username.hasError('minlength')">不能少於五個字元</div>
+      <div [hidden]="!username.hasError('required')">user name 必填</div>
     </div>
   </div>
-</ng-template>
+  <div>
+    <label for="password">password</label>
+    <input type="password" name="password" id="password" [formControl]="password">
+    <div [hidden]="password.valid || password.untouched">
+      <div>密碼有以下問題：</div>
+      <div [hidden]="!password.hasError('required')">password 必填</div>
+      <div [hidden]="!password.hasError('needsExclamation')">你的密碼必須要有一個驚嘆號</div>
+    </div>
+  </div>
+  <button type="submit" [disabled]="!loginForm.valid">Log In</button>
+</form>
