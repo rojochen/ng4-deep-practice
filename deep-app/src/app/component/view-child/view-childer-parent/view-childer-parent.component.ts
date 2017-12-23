@@ -5,7 +5,7 @@ import { ViewChilderChildComponent } from '../view-childer-child/view-childer-ch
   templateUrl: './view-childer-parent.component.html',
   styleUrls: ['./view-childer-parent.component.css']
 })
-export class ViewChilderParentComponent implements OnInit {
+export class ViewChilderParentComponent implements OnInit, AfterViewInit {
   @ViewChildren(ViewChilderChildComponent) alerts: QueryList<ViewChilderChildComponent>;
   alertsArr = [];
   constructor() { }
@@ -13,6 +13,7 @@ export class ViewChilderParentComponent implements OnInit {
   ngOnInit() {
   }
   ngAfterViewInit() {
+    // 在ngAfterViewInit取得hild的元素
     this.alertsArr = this.alerts.toArray();
   }
   showAlert(step) {

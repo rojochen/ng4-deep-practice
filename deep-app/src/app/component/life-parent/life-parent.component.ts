@@ -1,11 +1,29 @@
-import { Component, OnInit, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked, OnChanges, OnDestroy, DoCheck } from '@angular/core';
+import {
+  Component,
+  OnInit,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked,
+  OnChanges,
+  OnDestroy,
+  DoCheck
+} from '@angular/core';
 import { LoggerService } from '../../service/logger.service';
 @Component({
   selector: 'app-life-parent',
   templateUrl: './life-parent.component.html',
   styleUrls: ['./life-parent.component.css']
 })
-export class LifeParentComponent implements OnInit, OnDestroy, DoCheck, OnChanges, AfterContentInit, AfterContentChecked, AfterViewInit, AfterViewChecked {
+export class LifeParentComponent implements
+  OnInit,
+  OnDestroy,
+  DoCheck,
+  OnChanges,
+  AfterContentInit,
+  AfterContentChecked,
+  AfterViewInit,
+  AfterViewChecked {
   StudentInfo: Array<{ id: number, name: string }>;
   constructor(private Log: LoggerService) {
     this.Log.debug('life parent constructor');

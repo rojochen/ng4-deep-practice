@@ -6,7 +6,7 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./child.component.css']
 })
 export class ChildComponent implements OnInit {
-  name: string = 'childName';
+  name: String = 'childName';
   constructor() { }
 
   ngOnInit() {
