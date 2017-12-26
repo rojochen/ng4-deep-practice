@@ -52,19 +52,20 @@ export class CheckTwIdComponent implements OnInit {
   constructor(builder: FormBuilder) {
     // user name驗證
     this.username = new FormControl('', [
-      Validators.required,
-      Validators.minLength(5)
+      Validators.required, // 為必填
+      Validators.minLength(5) //最短長度為5
     ]);
     // password 驗證
     this.password = new FormControl('', [
-      Validators.required,
-      hasExclamationMark
+      Validators.required, //為必填
+      hasExclamationMark // 自定義的驗證
     ]);
     // 身分證字號驗證
     this.identity = new FormControl('', [
-      Validators.required,
-      CheckTaiwanID
+      Validators.required, // 為必填
+      CheckTaiwanID //自定義的驗證
     ]);
+    // loginForm group
     this.loginForm = builder.group({
       username: this.username,
       password: this.password,
@@ -79,6 +80,7 @@ export class CheckTwIdComponent implements OnInit {
   ngOnInit() {
 
   }
+  // form 送出
   login(value: any) {
     console.log('value: ', value);
     // Attempt Logging in...
