@@ -1,26 +1,28 @@
-<form [formGroup]="loginForm" (ngSubmit)="login()">
-
+<form id="form" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+  <!-- user name -->
   <div>
     <label for="username">username</label>
-    <input type="text" name="username" id="username" [formControl]="username">
+    <input type="text" name="username" id="username" [formControl]="username" [ngClass]="{ 'has-error': !username.valid && username.touched}">
     <div [hidden]="username.valid || username.untouched">
       <div>使用者名稱有以下問題：</div>
       <div [hidden]="!username.hasError('minlength')">不能少於五個字元</div>
       <div [hidden]="!username.hasError('required')">user name 必填</div>
     </div>
   </div>
+  <!-- password -->
   <div>
     <label for="password">password</label>
-    <input type="password" name="password" id="password" [formControl]="password">
+    <input type="password" name="password" id="password" [formControl]="password" [ngClass]="{ 'has-error': !password.valid && password.touched}">
     <div [hidden]="password.valid || password.untouched">
       <div>密碼有以下問題：</div>
       <div [hidden]="!password.hasError('required')">password 必填</div>
       <div [hidden]="!password.hasError('needsExclamation')">你的密碼必須要有一個驚嘆號</div>
     </div>
   </div>
+  <!-- identity -->
   <div>
     <label for="identity">身分證號碼</label>
-    <input type="identity" name="identity" id="identity" [formControl]="identity">
+    <input type="identity" name="identity" id="identity" [formControl]="identity" [ngClass]="{ 'has-error': !identity.valid && identity.touched}">
     <div [hidden]="identity.valid || identity.untouched">
       <div>身分證有以下問題：</div>
       <div [hidden]="!identity.hasError('required')">身分證 必填</div>

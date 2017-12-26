@@ -50,14 +50,17 @@ export class CheckTwIdComponent implements OnInit {
   password: FormControl;
   identity: FormControl;
   constructor(builder: FormBuilder) {
+    // user name驗證
     this.username = new FormControl('', [
       Validators.required,
       Validators.minLength(5)
     ]);
+    // password 驗證
     this.password = new FormControl('', [
       Validators.required,
       hasExclamationMark
     ]);
+    // 身分證字號驗證
     this.identity = new FormControl('', [
       Validators.required,
       CheckTaiwanID
@@ -67,14 +70,17 @@ export class CheckTwIdComponent implements OnInit {
       password: this.password,
       identity: this.identity
     });
-
+    // 用來觀察表格元素的變化
+    this.loginForm.valueChanges.subscribe((form: any) => {
+      console.log('form changed to:', form);
+    });
   }
 
   ngOnInit() {
 
   }
-  login() {
-    console.log(this.loginForm.value);
+  login(value: any) {
+    console.log('value: ', value);
     // Attempt Logging in...
   }
 
