@@ -14,6 +14,8 @@ import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-pare
 import { ViewChilderChildComponent } from './ViewChilderChild/view-childer-child/view-childer-child.component';
 import { ContentChildrenParentComponent } from './ContentChildren/content-children-parent/content-children-parent.component';
 import { ContentChildrenChildComponent } from './ContentChildren/content-children-child/content-children-child.component';
+import { SimplePaginationComponent } from './Extends/simple-pagination/simple-pagination.component';
+import { ExePaginationComponent } from './Extends/exe-pagination/exe-pagination.component';
 
 @NgModule({
   imports: [
@@ -33,7 +35,9 @@ import { ContentChildrenChildComponent } from './ContentChildren/content-childre
     ViewChilderParentComponent,
     ViewChilderChildComponent,
     ContentChildrenParentComponent,
-    ContentChildrenChildComponent
+    ContentChildrenChildComponent,
+    SimplePaginationComponent,
+    ExePaginationComponent
   ],
   exports: [
     LifeParentComponent,
@@ -49,7 +53,9 @@ import { ContentChildrenChildComponent } from './ContentChildren/content-childre
     ViewChilderParentComponent,
     ViewChilderChildComponent,
     ContentChildrenParentComponent,
-    ContentChildrenChildComponent
+    ContentChildrenChildComponent,
+    SimplePaginationComponent,
+    ExePaginationComponent
   ]
 })
 export class ComponentModule { }

@@ -1,0 +1,7 @@
+<a (click)="previousPage()" [class.disabled]="!hasPrevious()" href="javascript:void(0)">
+    ««
+</a>
+<span>{{ page }} / {{ pageCount }}</span>
+<a (click)="nextPage()" [class.disabled]="!hasNext()" href="javascript:void(0)">
+    »»
+</a>
