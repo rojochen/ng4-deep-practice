@@ -12,6 +12,7 @@ export class ViewChildParentComponent implements OnInit, AfterViewInit {
 
   ngOnInit() {
   }
+  // get child name
   ngAfterViewInit() {
     console.log(this.child);
   }

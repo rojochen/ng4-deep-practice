@@ -6,10 +6,11 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./view-child-child.component.css']
 })
 export class ViewChildChildComponent implements OnInit {
-  name: String = 'childName';
+  name: String;
   constructor() { }
 
   ngOnInit() {
+    this.name = 'childName';
   }
 
 }

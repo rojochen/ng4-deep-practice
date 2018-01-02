@@ -9,7 +9,7 @@ import {
   OnDestroy,
   DoCheck
 } from '@angular/core';
-import { LoggerService } from '../../service/logger.service';
+import { LoggerService } from '../../../service/logger.service';
 @Component({
   selector: 'app-life-parent',
   templateUrl: './life-parent.component.html',

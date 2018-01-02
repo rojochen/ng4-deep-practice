@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { LoggerService } from '../../service/logger.service';
+import { LoggerService } from '../../../service/logger.service';
 @Component({
   selector: 'app-output-parent',
   templateUrl: './output-parent.component.html',
