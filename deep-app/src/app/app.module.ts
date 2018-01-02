@@ -7,6 +7,9 @@ import { LoggerService } from './service/logger.service';
 // import feature module
 import { ComponentModule } from './component/component.module';
 import { FormModule } from './form/form.module';
+
+// route module
+import { AppRoutingModule } from './app-routing.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -14,7 +17,8 @@ import { FormModule } from './form/form.module';
   imports: [
     BrowserModule,
     ComponentModule,
-    FormModule
+    FormModule,
+    AppRoutingModule
   ],
   providers: [LoggerService],
   bootstrap: [AppComponent]
