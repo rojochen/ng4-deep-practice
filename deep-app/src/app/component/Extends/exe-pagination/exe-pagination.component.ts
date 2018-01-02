@@ -8,8 +8,6 @@ import { SimplePaginationComponent } from '../simple-pagination/simple-paginatio
   styleUrls: ['./exe-pagination.component.css']
 })
 export class ExePaginationComponent extends SimplePaginationComponent {
-  // nextText: string;
-  // previousText: string;
   constructor() {
     // get parent func
     super();
