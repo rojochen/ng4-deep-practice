@@ -1,0 +1,24 @@
+<div>
+  <h2>Master form</h2>
+  <form  #f="ngForm" (ngSubmit)="showData(f)">
+    <div>
+      <label for="ProductName">ProductName</label>
+      <input type="text" [ngModel]="formProductName" name="productName" required>
+    </div>
+    <div>
+      <label for="price">Price</label>
+      <input type="text"  [ngModel]="formPrice" name="price"   required>
+    </div>
+    <div>
+      <button>Added From</button>
+      <button type="submit">Show form data</button>
+  
+    </div>
+  </form>
+  <div>
+    <button (click)="addItems();">generate item</button>
+    <button (click)="showItems();" >show item list</button>
+    <button (click) ="changeIndex3()" >change fixed index</button>
+  </div>
+  <app-item-detail *ngFor="let item of items" [item]="item" (changeEvent)="onItemChangeEvent($event)"></app-item-detail>
+</div>
