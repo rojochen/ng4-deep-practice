@@ -1,0 +1,9 @@
+a {
+    padding: 2px;
+    text-decoration:none;
+}
+.disabled {
+    pointer-events: none;
+    cursor: default;
+    color:#ccc;
+ }

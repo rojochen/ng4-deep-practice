@@ -8,14 +8,10 @@ import { SimplePaginationComponent } from '../simple-pagination/simple-paginatio
   styleUrls: ['./exe-pagination.component.css']
 })
 export class ExePaginationComponent extends SimplePaginationComponent {
-  // @Input() previousText = '<<'; // override default text
-  // @Input() nextText = '>>'; // override default text
-  // @Input() title: string; // title input for child component only
+  // nextText: string;
+  // previousText: string;
   constructor() {
     // get parent func
     super();
-    console.log(this);
   }
-
-
 }
