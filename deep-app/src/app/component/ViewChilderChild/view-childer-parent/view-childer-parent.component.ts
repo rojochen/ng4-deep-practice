@@ -13,7 +13,7 @@ export class ViewChilderParentComponent implements OnInit, AfterViewInit {
   ngOnInit() {
   }
   ngAfterViewInit() {
-    // 在ngAfterViewInit取得hild的元素
+    // 在ngAfterViewInit取得child的元素
     this.alertsArr = this.alerts.toArray();
   }
   showAlert(step) {
