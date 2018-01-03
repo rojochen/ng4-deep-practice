@@ -1,2 +1,7 @@
 <h1>生命週期</h1>
-<app-life-child [studentInfo]="StudentInfo"></app-life-child>
+<app-life-child (change)="Change($event)"></app-life-child>
+<ul>
+    <ng-container *ngFor="let life of LifeCycleStatusList">
+        <li [style.color]="life.location === 'parent'? 'red': 'block'">{{life.lifeType}}</li>
+    </ng-container>
+</ul>

@@ -6,8 +6,7 @@ import { ViewChildChildComponent } from '../view-child-child/view-child-child.co
   styleUrls: ['./view-child-parent.component.css']
 })
 export class ViewChildParentComponent implements OnInit, AfterViewInit {
-  @ViewChild(ViewChildChildComponent)
-  child: ViewChildChildComponent;
+  @ViewChild(ViewChildChildComponent) child: ViewChildChildComponent;
   constructor() { }
 
   ngOnInit() {
