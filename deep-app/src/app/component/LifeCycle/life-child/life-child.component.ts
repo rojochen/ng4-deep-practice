@@ -35,12 +35,7 @@ export class LifeChildComponent implements
   @Output() change: EventEmitter<ILifeCycleInfo[]> = new EventEmitter<ILifeCycleInfo[]>();
   constructor(private Log: LoggerService) {
     this.Log.error('life child constructor');
-    // this.change.emit([{ location: 'child', lifeType: 'life child constructor' }]);
-    // callEmit(this.change, [{ location: 'child', lifeType: 'life child constructor' }]);
-    this.test();
-
-  }
-  test() {
+    // not work
     this.change.emit([{ location: 'child', lifeType: 'life child constructor' }]);
   }
   ngOnChanges() {
