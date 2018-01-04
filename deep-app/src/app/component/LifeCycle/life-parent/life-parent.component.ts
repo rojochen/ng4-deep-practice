@@ -28,14 +28,14 @@ export class LifeParentComponent implements
   AfterContentChecked,
   AfterViewInit,
   AfterViewChecked {
-  LifeCycleStatusList: ILifeCycleInfo[] = [];
+  LifeCycleStatusList: any;
   constructor(
     private Log: LoggerService,
     private LifeCycleSvc: LifeCycleSvcService
   ) {
     this.Log.debug('life parent constructor');
     this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent constructor' }]);
-    this.LifeCycleStatusList = this.LifeCycleSvc.getLifeCycleList();
+    this.LifeCycleStatusList = this.getLifeCycleData();
   }
   ngOnChanges() {
     this.Log.debug('life parent ngOnChanges');
@@ -68,5 +68,12 @@ export class LifeParentComponent implements
   ngOnDestroy() {
     this.Log.debug('life parent ngOnDestroy');
     this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent ngOnDestroy' }]);
+  }
+  getLifeCycleData() {
+    return new Promise((resolve, reject) => {
+      // return setTimeout(() => {
+        return resolve(this.LifeCycleSvc.getLifeCycleList());
+      // }, 1000);
+    });
   }
 }
