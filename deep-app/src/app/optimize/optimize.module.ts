@@ -12,9 +12,6 @@ import { ZoneDemoComponent } from './zone-demo/zone-demo.component';
     OptimizeRoutingModule,
     FormsModule
   ],
-  declarations: [ItemDetailComponent, ItemMasterComponent, ZoneDemoComponent],
-  exports: [
-    ItemDetailComponent, ItemMasterComponent, ZoneDemoComponent
-  ]
+  declarations: [ItemDetailComponent, ItemMasterComponent, ZoneDemoComponent]
 })
 export class OptimizeModule { }
