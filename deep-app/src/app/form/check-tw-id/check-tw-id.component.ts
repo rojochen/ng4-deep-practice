@@ -9,7 +9,7 @@ import {
   Validators
 } from '@angular/forms';
 
-import { hasExclamationMark, CheckTaiwanID } from '../validation';
+import { hasExclamationMark, CheckTaiwanID } from '../../shared/validation';
 
 
 @Component({

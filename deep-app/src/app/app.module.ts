@@ -3,21 +3,24 @@ import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
 // import global service
-import { LoggerService } from './service/logger.service';
+import { LoggerService } from './core/service/logger.service';
+
+// core module
+import { CoreModule } from './core/core.module';
+
 // import feature module
 import { ComponentModule } from './component/component.module';
 import { FormModule } from './form/form.module';
 
 // route module
 import { AppRoutingModule } from './app-routing.module';
-import { HeaderComponent } from './core/header/header.component';
- @NgModule({
+@NgModule({
   declarations: [
-    AppComponent,
-    HeaderComponent
-    ],
+    AppComponent
+  ],
   imports: [
     BrowserModule,
+    CoreModule,
     ComponentModule,
     FormModule,
     AppRoutingModule
