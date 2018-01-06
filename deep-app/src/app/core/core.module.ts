@@ -6,10 +6,10 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { Configuration } from './api/index';
 import { ConfigurationParameters } from './api/configuration';
-export const apiConfigFactory = (): Configuration => {
+export function apiConfigFactory(): Configuration {
   const params: ConfigurationParameters = { username: '', password: '', apiKeys: {} };
   return new Configuration(params);
-};
+}
 @NgModule({
   imports: [
     CommonModule,
