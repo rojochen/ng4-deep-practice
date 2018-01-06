@@ -10,7 +10,7 @@ export class ZoneDemoComponent implements OnInit {
   constructor(private zone: NgZone) {
     this.count = 0;
   }
-  update() {
+  refresh() {
     this.zone.run(() => {
       this.count = this.count;
     });

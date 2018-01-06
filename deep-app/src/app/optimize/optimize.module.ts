@@ -5,6 +5,7 @@ import { OptimizeRoutingModule } from './optimize-routing.module';
 import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { ItemMasterComponent } from './item-master/item-master.component';
 import { ZoneDemoComponent } from './zone-demo/zone-demo.component';
+import { DetectorRefDemoComponent } from './detector-ref-demo/detector-ref-demo.component';
 
 @NgModule({
   imports: [
@@ -12,7 +13,7 @@ import { ZoneDemoComponent } from './zone-demo/zone-demo.component';
     OptimizeRoutingModule,
     FormsModule
   ],
-  declarations: [ItemDetailComponent, ItemMasterComponent, ZoneDemoComponent],
+  declarations: [ItemDetailComponent, ItemMasterComponent, ZoneDemoComponent, DetectorRefDemoComponent],
   exports: [
     ItemDetailComponent, ItemMasterComponent, ZoneDemoComponent
   ]
