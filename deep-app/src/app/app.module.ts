@@ -10,10 +10,12 @@ import { FormModule } from './form/form.module';
 
 // route module
 import { AppRoutingModule } from './app-routing.module';
-@NgModule({
+import { HeaderComponent } from './core/header/header.component';
+ @NgModule({
   declarations: [
-    AppComponent
-  ],
+    AppComponent,
+    HeaderComponent
+    ],
   imports: [
     BrowserModule,
     ComponentModule,
