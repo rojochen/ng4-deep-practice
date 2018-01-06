@@ -2,31 +2,31 @@
   <!-- user name -->
   <div>
     <label for="username">username</label>
-    <input type="text" name="username" id="username" [formControl]="username" [ngClass]="{ 'has-error': !username.valid && username.touched}">
-    <div [hidden]="username.valid || username.untouched">
+    <input type="text" name="username" id="username" formControlName="username" [ngClass]="{ 'has-error': !loginForm.get('username').valid && loginForm.get('username').touched}">
+    <div [hidden]="loginForm.get('username').valid || loginForm.get('username').untouched">
       <div>使用者名稱有以下問題：</div>
-      <div [hidden]="!username.hasError('minlength')">不能少於五個字元</div>
-      <div [hidden]="!username.hasError('required')">user name 必填</div>
+      <div [hidden]="!loginForm.get('username').hasError('minlength')">不能少於五個字元</div>
+      <div [hidden]="!loginForm.get('username').hasError('required')">user name 必填</div>
     </div>
   </div>
   <!-- password -->
   <div>
     <label for="password">password</label>
-    <input type="password" name="password" id="password" [formControl]="password" [ngClass]="{ 'has-error': !password.valid && password.touched}">
-    <div [hidden]="password.valid || password.untouched">
+    <input type="password" name="password" id="password" formControlName="password" [ngClass]="{ 'has-error': !loginForm.get('password').valid && loginForm.get('password').touched}">
+    <div [hidden]="loginForm.get('password').valid || loginForm.get('password').untouched">
       <div>密碼有以下問題：</div>
-      <div [hidden]="!password.hasError('required')">password 必填</div>
-      <div [hidden]="!password.hasError('needsExclamation')">你的密碼必須要有一個驚嘆號</div>
+      <div [hidden]="!loginForm.get('password').hasError('required')">password 必填</div>
+      <div [hidden]="!loginForm.get('password').hasError('needsExclamation')">你的密碼必須要有一個驚嘆號</div>
     </div>
   </div>
   <!-- identity -->
   <div>
     <label for="identity">身分證號碼</label>
-    <input type="identity" name="identity" id="identity" [formControl]="identity" [ngClass]="{ 'has-error': !identity.valid && identity.touched}">
-    <div [hidden]="identity.valid || identity.untouched">
+    <input type="identity" name="identity" id="identity" formControlName="identity" [ngClass]="{ 'has-error': !loginForm.get('identity').valid && loginForm.get('identity').touched}">
+    <div [hidden]="loginForm.get('identity').valid || loginForm.get('identity').untouched">
       <div>身分證有以下問題：</div>
-      <div [hidden]="!identity.hasError('required')">身分證 必填</div>
-      <div [hidden]="!identity.hasError('needsIdExclamation')">身分證 格式錯誤</div>
+      <div [hidden]="!loginForm.get('identity').hasError('required')">身分證 必填</div>
+      <div [hidden]="!loginForm.get('identity').hasError('needsIdExclamation')">身分證 格式錯誤</div>
     </div>
   </div>
   <button type="submit" [disabled]="!loginForm.valid">Log In</button>
