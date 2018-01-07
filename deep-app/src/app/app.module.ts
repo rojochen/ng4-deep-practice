@@ -14,6 +14,8 @@ import { FormModule } from './form/form.module';
 
 // route module
 import { AppRoutingModule } from './app-routing.module';
+
+import { FeatureModule } from './feature/feature.module';
 @NgModule({
   declarations: [
     AppComponent
@@ -23,6 +25,7 @@ import { AppRoutingModule } from './app-routing.module';
     CoreModule,
     ComponentModule,
     FormModule,
+    FeatureModule,
     AppRoutingModule
   ],
   providers: [LoggerService],
