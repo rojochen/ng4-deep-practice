@@ -23,6 +23,7 @@ import { ViewChildChildComponent } from './ViewChild/view-child-child/view-child
 import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-parent/view-childer-parent.component';
 import { ViewChilderChildComponent } from './ViewChilderChild/view-childer-child/view-childer-child.component';
 
+import { ExtendsComponent } from './extends/extends.component';
 import { SimplePaginationComponent } from './Extends/simple-pagination/simple-pagination.component';
 import { ExePaginationComponent } from './Extends/exe-pagination/exe-pagination.component';
 
@@ -43,8 +44,8 @@ const optimizeRoutes: Routes = [
                     { path: 'childer', component: ViewChilderParentComponent }
                 ]
             },
-            { path: 'content-demo', component: ContentComponent }
-
+            { path: 'content-demo', component: ContentComponent },
+            { path: 'component-Inheritance-demo', component: ExtendsComponent }
         ]
     }
 ];
@@ -74,6 +75,7 @@ const optimizeRoutes: Routes = [
         ContentChildrenChildComponent,
         SimplePaginationComponent,
         ExePaginationComponent,
+        ExtendsComponent
     ],
     exports: [RouterModule]
 })

@@ -1,3 +1,4 @@
-<button (click)="previousPage()" [disabled]="!hasPrevious()">{{ previousText }}</button>
-<button (click)="nextPage()" [disabled]="!hasNext()">{{ nextText }}</button>
-<p>page {{ page }} of {{ pageCount }}</p>
+<button (click)="previousPage()" [disabled]="!hasPrevious()">Previous</button>
+<button (click)="nextPage()" [disabled]="!hasNext()">Next</button>
+
+<p>page {{ page }} of {{ pageCount }}
