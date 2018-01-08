@@ -11,6 +11,7 @@ const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
     { path: 'form', loadChildren: './form/form.module#FormModule'},
+    { path: 'optimize', loadChildren: './optimize/optimize.module#OptimizeModule'},
     { path: '**', redirectTo: '' }
 ];
 @NgModule({
