@@ -1,19 +1,12 @@
-<!-- <app-header></app-header> -->
-<!-- component -->
-<!-- <app-life-parent></app-life-parent> -->
-<!-- <app-input-parent></app-input-parent> -->
-<!-- <app-output-parent></app-output-parent> -->
-<!-- <app-parent>
-    <app-child></app-child>
-</app-parent> -->
+<app-header>
+    <a [routerLink]="['/']" [appNavLinkColor]="navLinkStyleConfig">
+        Angular4-Deep
+    </a>
+    <a [routerLink]="['form/check-tw-id']" [appNavLinkColor]="navLinkStyleConfig">Form</a>
+    <a [routerLink]="['optimize/home']" [appNavLinkColor]="navLinkStyleConfig">Optimize</a>
+    <a [routerLink]="['component/home']" [appNavLinkColor]="navLinkStyleConfig">Component</a>
+</app-header>
 
-
-<!-- form -->
-<!-- <app-check-tw-id></app-check-tw-id> -->
-<nav>Navigation:
-    <a [routerLink]="['/']">Home</a>
-    <a [routerLink]="['form/check-tw-id']">Form</a>
-    <a [routerLink]="['optimize/home']">Optimize</a>
-    <a [routerLink]="['component/home']">component</a>
-</nav>
-<router-outlet></router-outlet>
+<div class="content">
+    <router-outlet></router-outlet>
+</div>

@@ -6,4 +6,9 @@ header {
     height: 45px;
     box-sizing: border-box;
     background-color: #0184c5;
+    padding: 0px 10px;
+}
+nav {
+    box-sizing: border-box;
+    line-height: 45px;
 }

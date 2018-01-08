@@ -1,0 +1,6 @@
+div {
+    height: 100%;
+    text-align: center;
+    font-size: 30px;
+    line-height:calc(100vh - 45px);
+}
