@@ -31,7 +31,15 @@ const optimizeRoutes: Routes = [
             { path: '', redirectTo: 'life-demo', pathMatch: 'full' },
             { path: 'life-demo', component: LifeParentComponent },
             { path: 'input-demo', component: InputParentComponent },
-            { path: 'output-demo', component: OutputParentComponent }
+            { path: 'output-demo', component: OutputParentComponent },
+            {
+                path: 'view-demo',
+                children: [
+                    { path: '', redirectTo: 'child', pathMatch: 'full' },
+                    { path: 'child', component: ViewChildParentComponent },
+                    { path: 'childer', component: ViewChilderParentComponent }
+                ]
+            }
         ]
     }
 ];
@@ -59,7 +67,7 @@ const optimizeRoutes: Routes = [
         ContentChildrenParentComponent,
         ContentChildrenChildComponent,
         SimplePaginationComponent,
-        ExePaginationComponent,  
+        ExePaginationComponent,
     ],
     exports: [RouterModule]
 })
