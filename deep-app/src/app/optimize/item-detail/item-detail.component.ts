@@ -1,6 +1,5 @@
-import { ChangeDetectionStrategy } from '@angular/core/src/change_detection/constants';
 import { Item } from './../model/item';
-import { Component, OnInit, Input,Output, EventEmitter } from '@angular/core';
+import { Component, OnInit, Input,Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
  
 @Component({
   selector: 'app-item-detail',

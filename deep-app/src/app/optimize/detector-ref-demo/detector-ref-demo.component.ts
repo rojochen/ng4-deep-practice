@@ -1,5 +1,4 @@
-import { ChangeDetectionStrategy } from '@angular/core/src/change_detection/constants';
-import { Component, OnInit, Input, ChangeDetectorRef } from '@angular/core';
+import { Component, OnInit, Input, ChangeDetectorRef, ChangeDetectionStrategy } from '@angular/core';
 
 @Component({
   selector: 'app-detector-ref-demo',

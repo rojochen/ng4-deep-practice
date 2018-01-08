@@ -2,8 +2,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
-// core module
-import { CoreModule } from './core/core.module';
+
 // route module
 import { AppRoutingModule } from './app-routing.module';
 @NgModule({
@@ -12,7 +11,6 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    CoreModule,
     AppRoutingModule
   ],
   providers: [],
