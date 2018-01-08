@@ -7,17 +7,18 @@ import { FooterComponent } from './footer/footer.component';
 import { Configuration } from './api/index';
 import { ConfigurationParameters } from './api/configuration';
 export function apiConfigFactory(): Configuration {
-  console.log('he');
   const params: ConfigurationParameters = { username: '', password: '', apiKeys: {} };
   return new Configuration(params);
 }
+import { LoggerService } from './service/logger.service';
 @NgModule({
   imports: [
     CommonModule,
     CoreRoutingModule
   ],
   providers: [
-    { provide: Configuration, useFactory: apiConfigFactory },
+    LoggerService,
+    { provide: Configuration, useFactory: apiConfigFactory}
   ],
   declarations: [HeaderComponent, FooterComponent],
   exports: [HeaderComponent, FooterComponent]

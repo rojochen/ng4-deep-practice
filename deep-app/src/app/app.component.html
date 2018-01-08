@@ -1,4 +1,4 @@
-<app-header></app-header>
+<!-- <app-header></app-header> -->
 <!-- component -->
 <!-- <app-life-parent></app-life-parent> -->
 <!-- <app-input-parent></app-input-parent> -->
@@ -18,3 +18,8 @@
 
 <!-- form -->
 <!-- <app-check-tw-id></app-check-tw-id> -->
+<p>Navigation:
+    <a [routerLink]="['/']">Home</a>
+    <a [routerLink]="['form/check-tw-id']">First Page</a>
+</p>
+<router-outlet></router-outlet>

@@ -8,8 +8,11 @@ import {
   FormGroup,
   Validators
 } from '@angular/forms';
-
+// validation
 import { hasExclamationMark, CheckTaiwanID } from '../../shared/validation';
+
+// log service
+import { LoggerService } from '../../core/service/logger.service';
 
 
 @Component({
@@ -19,7 +22,10 @@ import { hasExclamationMark, CheckTaiwanID } from '../../shared/validation';
 })
 export class CheckTwIdComponent implements OnInit {
   loginForm: FormGroup;
-  constructor(builder: FormBuilder) {
+  constructor(
+    private builder: FormBuilder,
+    private log: LoggerService
+  ) {
     // loginForm group
     this.loginForm = builder.group({
       username: new FormControl('', [
@@ -37,7 +43,7 @@ export class CheckTwIdComponent implements OnInit {
     });
     // 用來觀察表格元素的變化
     this.loginForm.valueChanges.subscribe((form: any) => {
-      console.log('form changed to:', form);
+      this.log.debug(form)
     });
   }
 
@@ -46,7 +52,7 @@ export class CheckTwIdComponent implements OnInit {
   }
   // form 送出
   login(value: any) {
-    console.log('value: ', value);
+    this.log.debug(value);
     // Attempt Logging in...
   }
 

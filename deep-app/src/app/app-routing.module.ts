@@ -1,10 +1,16 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
 import { Routes, RouterModule } from '@angular/router';
 
-import { CheckTwIdComponent } from './form/check-tw-id/check-tw-id.component';
+import { HomeComponent } from './home/home.component';
+
+// 開啟Hash 模式需要import LocationStrategy & HashLocationStrategy from '@angular/common。
+const openHashConfig = { provide: LocationStrategy, useClass: HashLocationStrategy };
+
 const appRoutes: Routes = [
-    { path: '', component: CheckTwIdComponent },
+    { path: '', redirectTo: '/home', pathMatch: 'full' },
+    { path: 'home', component: HomeComponent },
+    { path: 'form', loadChildren: './form/form.module#FormModule'},
     { path: '**', redirectTo: '' }
 ];
 @NgModule({
@@ -12,9 +18,14 @@ const appRoutes: Routes = [
         CommonModule,
         RouterModule.forRoot(appRoutes)
     ],
+    declarations:[
+        HomeComponent
+    ],
+    providers:[
+        openHashConfig
+    ],
     exports: [
         RouterModule
-    ],
-    declarations: []
+    ]
 })
 export class AppRoutingModule { }
