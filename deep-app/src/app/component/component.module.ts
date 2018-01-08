@@ -8,6 +8,7 @@ import { CoreModule } from '../core/core.module';
 import { ComponentRoutingModule } from './component-routing.module';
 
 
+
 @NgModule({
   imports: [
     CommonModule,
