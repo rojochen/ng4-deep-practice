@@ -10,7 +10,7 @@ export class InputParentComponent implements OnInit {
   constructor() { }
 
   ngOnInit() {
-    this.initialCount = 5;
+    this.initialCount = 0;
   }
 
 }
