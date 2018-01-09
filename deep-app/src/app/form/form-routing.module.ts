@@ -6,6 +6,9 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // ReactiveFo
 // core module
 import { CoreModule } from '../core/core.module';
 
+// shared model
+import { SharedModule } from './../shared/shared.module';
+
 // component
 import { CheckTwIdComponent } from './check-tw-id/check-tw-id.component';
 
@@ -18,6 +21,7 @@ const formRoutes: Routes = [{
 @NgModule({
     imports: [
         CommonModule,
+        SharedModule,
         FormsModule,
         ReactiveFormsModule,
         CoreModule,
