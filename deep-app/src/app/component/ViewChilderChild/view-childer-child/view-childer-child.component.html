@@ -1,10 +1,9 @@
-<!-- <router-outlet></router-outlet> -->
-<div *ngIf="!hidden">
-  <div class="backdrop" (click)="hide()"></div>
-  <div class="modal">
-    <ng-content></ng-content>
-    <div>
-      <button (click)="hide()">{{ ok }}</button>
+<div class="row" *ngIf="!hidden">    
+    <div id="modal" class="panel panel-default">
+        <div class="panel-body">
+            <ng-content></ng-content>
+            <button class="btn btn-default" (click)="hide()">{{ ok }}</button>
+        </div>
     </div>
-  </div>
+    
 </div>

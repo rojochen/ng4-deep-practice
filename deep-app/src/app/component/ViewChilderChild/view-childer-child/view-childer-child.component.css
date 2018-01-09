@@ -1,4 +1,4 @@
-.modal {
+#modal {
     position: fixed;
     left: 50%;
     top: 50%;
@@ -8,7 +8,7 @@
     padding: 1rem;
   }
 
-  .backdrop {
+  #backdrop {
     position: absolute;
     background: rgba(0, 0, 0, 0.1);
     top: 0;

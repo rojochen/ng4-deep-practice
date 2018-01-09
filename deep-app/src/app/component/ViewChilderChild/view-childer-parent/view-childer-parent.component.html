@@ -1,14 +1,18 @@
-<nav>
-    <a [routerLink]="['../child']">view-child</a>
-  </nav>
-<h2>View childer child 範例</h2>
-<app-view-childer-child ok="Next" (close)="showAlert(2)">
-  Step 1: Learn angular
-</app-view-childer-child>
-<app-view-childer-child ok="Next" (close)="showAlert(3)">
-  Step 2: Love angular
-</app-view-childer-child>
-<app-view-childer-child ok="Close">
-  Step 3: Build app
-</app-view-childer-child>
-<button (click)="showAlert(1)">Show steps</button>
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-heading">View childer child 範例</div>
+    <div class="panel-body">
+      <app-view-childer-child ok="Next" (close)="showAlert(2)">
+        Step 1: Learn angular
+      </app-view-childer-child>
+      <app-view-childer-child ok="Next" (close)="showAlert(3)">
+        Step 2: Love angular
+      </app-view-childer-child>
+      <app-view-childer-child ok="Close">
+        Step 3: Build app
+      </app-view-childer-child>
+      <button class="btn btn-default" (click)="showAlert(1)">Show steps</button>
+    </div>
+  </div>
+  <button class="btn btn-default" [routerLink]="['../child']">go view-child</button>
+</div>
