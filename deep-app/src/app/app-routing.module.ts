@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule, LocationStrategy, HashLocationStrategy } from '@angular/common';
-import { Routes, RouterModule } from '@angular/router';
+import { Routes, RouterModule, PreloadAllModules } from '@angular/router';
 
 // index component
 import { HomeComponent } from './home/home.component';
@@ -11,20 +11,22 @@ const openHashConfig = { provide: LocationStrategy, useClass: HashLocationStrate
 const appRoutes: Routes = [
     { path: '', redirectTo: '/home', pathMatch: 'full' },
     { path: 'home', component: HomeComponent },
-    { path: 'form', loadChildren: './form/form.module#FormModule'},
-    { path: 'optimize', loadChildren: './optimize/optimize.module#OptimizeModule'},
-    { path: 'component', loadChildren: './component/component.module#ComponentModule'},
+    { path: 'form', loadChildren: './form/form.module#FormModule' },
+    { path: 'optimize', loadChildren: './optimize/optimize.module#OptimizeModule' },
+    { path: 'component', loadChildren: './component/component.module#ComponentModule' },
     { path: '**', redirectTo: '' }
 ];
 @NgModule({
     imports: [
         CommonModule,
-        RouterModule.forRoot(appRoutes)
+        RouterModule.forRoot(appRoutes, {
+            preloadingStrategy: PreloadAllModules //只要在首頁執行時，有載入0.chunk.js就是會預先載入，如果不確定的話可以把預先載入的功能移除，二者交互比對就知道了。
+        })
     ],
-    declarations:[
+    declarations: [
         HomeComponent
     ],
-    providers:[
+    providers: [
         openHashConfig
     ],
     exports: [
