@@ -2,6 +2,8 @@
 <app-life-child></app-life-child>
 <ul>
     <ng-container *ngFor="let life of LifeCycleStatusList | async">
-        <li [style.color]="life.location === 'parent'? 'red': 'block'">{{life.lifeType}}</li>
+        <div class="panel panel-default">
+            <div class="panel-body" [ngClass]="{'label-primary': life.location == 'parent'}">{{life.lifeType}}</div>
+        </div>
     </ng-container>
 </ul>

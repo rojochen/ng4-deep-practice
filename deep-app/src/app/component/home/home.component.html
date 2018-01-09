@@ -1,9 +1,29 @@
-<nav>
-    <a [routerLink]="['life-demo']">life-demo</a>
-    <a [routerLink]="['input-demo']">input-demo</a>
-    <a [routerLink]="['output-demo']">output-demo</a>
-    <a [routerLink]="['view-demo/child']">view-demo</a>
-    <a [routerLink]="['content-demo']">content-demo</a>
-    <a [routerLink]="['component-Inheritance-demo']">Component-Inheritance-demo</a>
-  </nav>
-  <router-outlet></router-outlet>
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Component Example
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li>
+      <a [routerLink]="['life-demo']">life-cycle-demo</a>
+    </li>
+    <li>
+      <a [routerLink]="['input-demo']">input-demo</a>
+    </li>
+    <li>
+      <a [routerLink]="['output-demo']">output-demo</a>
+    </li>
+    <li>
+      <a [routerLink]="['view-demo/child']">view-demo</a>
+    </li>
+    <li>
+      <a [routerLink]="['content-demo']">content-demo</a>
+    </li>
+    <li>
+      <a [routerLink]="['component-Inheritance-demo']">Component-Inheritance-demo</a>
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
