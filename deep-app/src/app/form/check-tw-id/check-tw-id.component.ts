@@ -36,7 +36,9 @@ export class CheckTwIdComponent implements OnInit {
         Validators.required, //為必填
         hasExclamationMark // 自定義的驗證
       ]),
-      name: [null,[Validators.required]],
+      name: new FormControl('', [
+        Validators.required,
+      ]),
       identity: new FormControl('', [
         Validators.required, // 為必填
         CheckTaiwanID //自定義的驗證

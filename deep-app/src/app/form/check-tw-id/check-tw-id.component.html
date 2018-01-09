@@ -20,9 +20,9 @@
   <div class="form-group" [ngClass]="{ 'has-error': !loginForm.get('name').valid && loginForm.get('name').touched}">
     <label class="control-label" for="name">真實姓名</label>
     <input type="text" class="form-control" id="name" nameValidate formControlName="name">
-    <div *ngIf="loginForm.get('name').valid || loginForm.get('name').untouched">
-      <span class="help-block" *ngIf="!loginForm.get('name').pristine && loginForm.get('name').hasError('required')">請輸入姓名</span>
-      <span class="help-block" *ngIf="!loginForm.get('name').pristine && loginForm.get('name').hasError('nameValidate')">姓名為中文或英文</span>
+    <div [hidden]="loginForm.get('name').valid || loginForm.get('name').untouched">
+      <span class="help-block" [hidden]="!loginForm.get('name').pristine && loginForm.get('name').hasError('required')">請輸入姓名</span>
+      <span class="help-block" [hidden]="!loginForm.get('name').pristine && loginForm.get('name').hasError('nameValidate')">姓名為中文或英文</span>
     </div>
   </div>
   <!-- identity -->
