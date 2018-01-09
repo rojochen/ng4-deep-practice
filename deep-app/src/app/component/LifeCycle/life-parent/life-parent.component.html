@@ -1,9 +1,14 @@
 <h1>生命週期</h1>
 <app-life-child></app-life-child>
-<ul>
-    <ng-container *ngFor="let life of LifeCycleStatusList | async">
-        <div class="panel panel-default" [ngClass]="{'panel-default': life.location != 'parent', 'panel-info': life.location == 'parent'}">
-            <div class="panel-body">{{life.lifeType}}</div>
-        </div>
-    </ng-container>
-</ul>
+<div class="life-cycle">
+    <div class="timeline">
+        <ng-container *ngFor="let life of LifeCycleStatusList | async">
+            <div class="container left" [ngClass]="{'right': life.location != 'parent', 'left': life.location == 'parent'}">
+                <div class="content">
+                    <h2>{{getNowTime()}}</h2>
+                    <p>{{life.lifeType}}</p>
+                </div>
+            </div>
+        </ng-container>
+    </div>
+</div>
