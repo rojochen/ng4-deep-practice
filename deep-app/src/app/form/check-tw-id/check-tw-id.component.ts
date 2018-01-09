@@ -22,14 +22,10 @@ import { LoggerService } from '../../core/service/logger.service';
 })
 export class CheckTwIdComponent implements OnInit {
   loginForm: FormGroup;
-<<<<<<< HEAD
-  constructor(builder: FormBuilder) {
-=======
   constructor(
     private builder: FormBuilder,
     private log: LoggerService
   ) {
->>>>>>> restructure
     // loginForm group
     this.loginForm = builder.group({
       username: new FormControl('', [
@@ -40,12 +36,9 @@ export class CheckTwIdComponent implements OnInit {
         Validators.required, //為必填
         hasExclamationMark // 自定義的驗證
       ]),
-<<<<<<< HEAD
-=======
       name: new FormControl('', [
         Validators.required,
       ]),
->>>>>>> restructure
       identity: new FormControl('', [
         Validators.required, // 為必填
         CheckTaiwanID //自定義的驗證
