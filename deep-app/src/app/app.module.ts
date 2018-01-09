@@ -2,11 +2,10 @@ import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AppComponent } from './app.component';
 
-// import global service
-import { LoggerService } from './service/logger.service';
-// import feature module
-import { ComponentModule } from './component/component.module';
-import { FormModule } from './form/form.module';
+// core module
+import { CoreModule } from './core/core.module';
+// shared module
+import { SharedModule } from './shared/shared.module';
 
 // route module
 import { AppRoutingModule } from './app-routing.module';
@@ -16,11 +15,11 @@ import { AppRoutingModule } from './app-routing.module';
   ],
   imports: [
     BrowserModule,
-    ComponentModule,
-    FormModule,
+    CoreModule,
+    SharedModule,
     AppRoutingModule
   ],
-  providers: [LoggerService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

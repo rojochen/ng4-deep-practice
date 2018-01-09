@@ -1,8 +1,8 @@
 import { Item } from './../model/item';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit ,ChangeDetectionStrategy } from '@angular/core';
 import { IItem } from '../model/Iitem';
 import { NgForm } from '@angular/forms';
-import { ChangeDetectionStrategy } from '@angular/core/src/change_detection/constants';
+
 
 @Component({
   selector: 'app-item-master',

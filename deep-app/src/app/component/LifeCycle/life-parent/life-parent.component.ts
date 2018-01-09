@@ -9,9 +9,9 @@ import {
   OnDestroy,
   DoCheck
 } from '@angular/core';
-import { LoggerService } from '../../../service/logger.service';
+import { LoggerService } from '../../../core/service/logger.service';
 import { LifeCycleSvcService, ILifeCycleInfo } from '../life-cycle-svc.service';
-
+import { displayTime } from '../../../shared/uitl';
 
 @Component({
   selector: 'app-life-parent',
@@ -29,6 +29,7 @@ export class LifeParentComponent implements
   AfterViewInit,
   AfterViewChecked {
   LifeCycleStatusList: any;
+  NowDate: Date;
   constructor(
     private Log: LoggerService,
     private LifeCycleSvc: LifeCycleSvcService
@@ -72,8 +73,11 @@ export class LifeParentComponent implements
   getLifeCycleData() {
     return new Promise((resolve, reject) => {
       // return setTimeout(() => {
-        return resolve(this.LifeCycleSvc.getLifeCycleList());
+      return resolve(this.LifeCycleSvc.getLifeCycleList());
       // }, 1000);
     });
+  }
+  getNowTime(): string {
+    return displayTime(new Date(), 'yyyy-MM-dd hh:mm');
   }
 }

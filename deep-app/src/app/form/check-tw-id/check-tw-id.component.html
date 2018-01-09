@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <form id="form" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
   <!-- user name -->
   <div>
@@ -27,7 +28,44 @@
       <div>身分證有以下問題：</div>
       <div [hidden]="!loginForm.get('identity').hasError('required')">身分證 必填</div>
       <div [hidden]="!loginForm.get('identity').hasError('needsIdExclamation')">身分證 格式錯誤</div>
+=======
+<div class="form-group" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+  <div class="form-group has-feedback" [ngClass]="{ 'has-error': !loginForm.get('username').valid && loginForm.get('username').touched}">
+    <label class="control-label" for="username">使用者名稱</label>
+    <input type="text" name="username" id="username" class="form-control" formControlName="username">
+    <div [hidden]="loginForm.get('username').valid || loginForm.get('username').untouched">
+      <span class="help-block" [hidden]="!loginForm.get('username').hasError('minlength')">不能少於五個字元</span>
+      <span class="help-block" [hidden]="!loginForm.get('username').hasError('required')">沒有輸入使用者名稱</span>
     </div>
   </div>
-  <button type="submit" [disabled]="!loginForm.valid">Log In</button>
-</form>
+  <!-- password -->
+  <div class="form-group" [ngClass]="{ 'has-error': !loginForm.get('password').valid && loginForm.get('password').touched}">
+    <label class="control-label" for="password">密碼</label>
+    <input type="password" name="password" id="password" class="form-control" formControlName="password">
+    <div [hidden]="loginForm.get('password').valid || loginForm.get('password').untouched">
+      <span class="help-block" [hidden]="!loginForm.get('password').hasError('required')">尚未輸入密碼</span>
+      <span class="help-block" [hidden]="!loginForm.get('password').hasError('needsExclamation')">你的密碼必須要有一個驚嘆號</span>
+    </div>
+  </div>
+  <!-- name -->
+  <div class="form-group" [ngClass]="{ 'has-error': !loginForm.get('name').valid && loginForm.get('name').touched}">
+    <label class="control-label" for="name">真實姓名</label>
+    <input type="text" class="form-control" id="name" nameValidate formControlName="name">
+    <div [hidden]="loginForm.get('name').valid || loginForm.get('name').untouched">
+      <span class="help-block" [hidden]="!loginForm.get('name').pristine && loginForm.get('name').hasError('required')">請輸入姓名</span>
+      <span class="help-block" [hidden]="!loginForm.get('name').pristine && loginForm.get('name').hasError('nameValidate')">姓名為中文或英文</span>
+    </div>
+  </div>
+  <!-- identity -->
+  <div class="form-group" [ngClass]="{ 'has-error': !loginForm.get('identity').valid && loginForm.get('identity').touched}">
+    <label class="control-label" for="identity">身分證號碼</label>
+    <input type="identity" name="identity" id="identity" class="form-control" formControlName="identity">
+    <div [hidden]="loginForm.get('identity').valid || loginForm.get('identity').untouched">
+      <span class="help-block" [hidden]="!loginForm.get('identity').hasError('required')">請輸入身分證字號</span>
+      <span class="help-block" [hidden]="!loginForm.get('identity').hasError('needsIdExclamation')">身分證錯誤</span>
+>>>>>>> restructure
+    </div>
+  </div>
+  <!-- 貼心小提醒 type:submit 當你在最後一個input按enter的時候 form表單會送出,所以如果不想送出type請設定button -->
+  <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">登入</button>
+</div>

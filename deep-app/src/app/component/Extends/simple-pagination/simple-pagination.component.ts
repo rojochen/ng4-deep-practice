@@ -6,18 +6,18 @@ import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./simple-pagination.component.css']
 })
 export class SimplePaginationComponent implements OnInit {
-  @Input() page: number;
   @Input() pageCount: number;
-  @Input() previousText: string;
-  @Input() nextText: string;
+
+  @Input() page: number;
+
   @Output() pageChanged = new EventEmitter<number>();
+
+  @Input() previousText: string = 'Previous';
+
+  @Input() nextText: string = 'Next';
   constructor() { }
 
   ngOnInit() {
-    this.page = this.page || 1;
-    this.pageCount = this.pageCount || 10;
-    this.previousText = this.previousText || 'Previous';
-    this.nextText = this.nextText || 'Next';
   }
 
   nextPage(): void {

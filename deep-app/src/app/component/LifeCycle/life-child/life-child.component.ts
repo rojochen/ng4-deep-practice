@@ -11,7 +11,7 @@ import {
   OnDestroy,
   DoCheck
 } from '@angular/core';
-import { LoggerService } from '../../../service/logger.service';
+import { LoggerService } from '../../../core/service/logger.service';
 import { LifeCycleSvcService, ILifeCycleInfo } from '../life-cycle-svc.service';
 @Component({
   selector: 'app-life-child',

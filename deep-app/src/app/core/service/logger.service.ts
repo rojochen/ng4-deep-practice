@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 
-import { ALogger } from '../abstract/ALogger';
+import { ALogger } from '../model/ALogger';
 
 @Injectable()
 export class LoggerService implements ALogger {

@@ -1,0 +1,31 @@
+<div class="dropdown">
+  <button class="btn btn-primary dropdown-toggle" type="button" data-toggle="dropdown">Component Example
+    <span class="caret"></span>
+  </button>
+  <ul class="dropdown-menu">
+    <li>
+      <a [routerLink]="['life-demo']">life-cycle-demo</a>
+    </li>
+    <li>
+      <a [routerLink]="['input-demo']">input-demo</a>
+    </li>
+    <li>
+      <a [routerLink]="['output-demo']">output-demo</a>
+    </li>
+    <li>
+      <a [routerLink]="['view-demo/child']">view-demo</a>
+    </li>
+    <li>
+      <a [routerLink]="['content-demo']">content-demo</a>
+    </li>
+    <li>
+      <a [routerLink]="['component-Inheritance-demo']">Component-Inheritance-demo</a>
+    </li>
+  </ul>
+</div>
+
+<div class="container">
+    <div class="row col-xs-12">
+        <router-outlet></router-outlet>
+    </div>
+</div>

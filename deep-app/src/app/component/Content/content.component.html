@@ -1,0 +1,14 @@
+<nav>
+  <a href="javascript:void(0);" (click)="changeTemplate()">{{pathName}}</a>
+</nav>
+
+<app-parent *ngIf="pathName==='child'">
+  <app-child></app-child>
+</app-parent>
+
+
+<app-content-children-parent *ngIf="pathName==='children'">
+  <app-content-children-child name="World"></app-content-children-child>
+  <app-content-children-child name="Other World"></app-content-children-child>
+  <app-content-children-child #last name="Last World"></app-content-children-child>
+</app-content-children-parent>

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 <!-- component -->
 <!-- <app-life-parent></app-life-parent> -->
 <!-- <app-input-parent></app-input-parent> -->
@@ -17,3 +18,38 @@
 
 <!-- form -->
 <app-check-tw-id></app-check-tw-id>
+=======
+<nav class="navbar navbar-default">
+    <div class="container-fluid">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1"
+                aria-expanded="false">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" [routerLink]="['/']">Angular4-Deep</a>
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li routerLinkActive="active">
+                    <a [routerLink]="['form/check-tw-id']">Form</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['optimize/home']">Optimize</a>
+                </li>
+                <li routerLinkActive="active">
+                    <a [routerLink]="['component/home']">Component</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+
+
+<div class="container">
+    <router-outlet></router-outlet>
+</div>
+>>>>>>> restructure
