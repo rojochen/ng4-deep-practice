@@ -1,3 +1,4 @@
+import { SharedModule } from './../shared/shared.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
@@ -7,6 +8,7 @@ import { FormRoutingModule } from './form-routing.module'
 @NgModule({
   imports: [
     CommonModule,
+    SharedModule,
     FormRoutingModule
   ],
   declarations: [],

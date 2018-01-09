@@ -36,15 +36,16 @@ export class CheckTwIdComponent implements OnInit {
         Validators.required, //為必填
         hasExclamationMark // 自定義的驗證
       ]),
+      name: [null,[Validators.required]],
       identity: new FormControl('', [
         Validators.required, // 為必填
         CheckTaiwanID //自定義的驗證
       ])
     });
     // 用來觀察表格元素的變化
-    this.loginForm.valueChanges.subscribe((form: any) => {
-      this.log.debug(form)
-    });
+    // this.loginForm.valueChanges.subscribe((form: any) => {
+    //   this.log.debug(form)
+    // });
   }
 
   ngOnInit() {
