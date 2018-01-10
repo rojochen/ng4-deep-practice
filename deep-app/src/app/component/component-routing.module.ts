@@ -9,6 +9,7 @@ import { ViewChildParentComponent } from './ViewChild/view-child-parent/view-chi
 import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-parent/view-childer-parent.component';
 import { ContentComponent } from './Content/content.component';
 import { ExtendsComponent } from './extends/extends.component';
+import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
 
 const optimizeRoutes: Routes = [
     {
@@ -27,7 +28,8 @@ const optimizeRoutes: Routes = [
                 ]
             },
             { path: 'content-demo', component: ContentComponent },
-            { path: 'component-Inheritance-demo', component: ExtendsComponent }
+            { path: 'component-Inheritance-demo', component: ExtendsComponent },
+            { path: 'broadcaster', component: BroadHomeComponent }
         ]
     }
 ];

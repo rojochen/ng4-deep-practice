@@ -11,6 +11,8 @@ import { CoreModule } from './core/core.module';
 import { SharedModule } from './shared/shared.module';
 // route module
 import { AppRoutingModule } from './app-routing.module';
+
+import { BroadcasterService } from './service/broadcaster.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -22,7 +24,7 @@ import { AppRoutingModule } from './app-routing.module';
     SharedModule,
     AppRoutingModule
   ],
-  providers: [],
+  providers: [BroadcasterService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

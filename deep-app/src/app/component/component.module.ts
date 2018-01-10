@@ -30,6 +30,9 @@ import { ViewChilderChildComponent } from './ViewChilderChild/view-childer-child
 import { ExtendsComponent } from './extends/extends.component';
 import { SimplePaginationComponent } from './Extends/simple-pagination/simple-pagination.component';
 import { ExePaginationComponent } from './Extends/exe-pagination/exe-pagination.component';
+import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
+import { BroadoneComponent } from './Broadcaster/broadone/broadone.component';
+import { BroadtwoComponent } from './Broadcaster/broadtwo/broadtwo.component';
 
 
 
@@ -60,7 +63,10 @@ import { ExePaginationComponent } from './Extends/exe-pagination/exe-pagination.
     ContentChildrenChildComponent,
     SimplePaginationComponent,
     ExePaginationComponent,
-    ExtendsComponent
+    ExtendsComponent,
+    BroadHomeComponent,
+    BroadoneComponent,
+    BroadtwoComponent
   ],
   exports: []
 })
