@@ -1,14 +1,6 @@
 import { NgModule } from '@angular/core';
-import { CommonModule } from '@angular/common';
+
 import { Routes, RouterModule } from '@angular/router';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // ReactiveForms need ReactiveFormsModule
-
-// core module
-import { CoreModule } from '../core/core.module';
-
-// shared model
-import { SharedModule } from './../shared/shared.module';
-
 // component
 import { CheckTwIdComponent } from './check-tw-id/check-tw-id.component';
 
@@ -20,14 +12,9 @@ const formRoutes: Routes = [{
 
 @NgModule({
     imports: [
-        CommonModule,
-        SharedModule,
-        FormsModule,
-        ReactiveFormsModule,
-        CoreModule,
         RouterModule.forChild(formRoutes)
     ],
-    declarations: [CheckTwIdComponent],
+    declarations: [],
     exports: [RouterModule]
 })
 export class FormRoutingModule { }
