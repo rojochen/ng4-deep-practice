@@ -21,9 +21,9 @@ export function CheckTaiwanID(input: FormControl) { // 身份證檢查函式
         if ((num % 10) === 0) {
             return null;
         } else {
-            return { needsIdExclamation: true };
+            return { identityValidate: true };
         }
     } else {
-        return { needsIdExclamation: true };
+        return { identityValidate: true };
     }
 }

@@ -1,6 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms'; // ReactiveForms need ReactiveFormsModule
+import { ReactiveFormsModule } from '@angular/forms'; // ReactiveForms need ReactiveFormsModule
 
 // core module
 import { CoreModule } from '../core/core.module';
@@ -15,10 +15,9 @@ import { CheckTwIdComponent } from './check-tw-id/check-tw-id.component';
 @NgModule({
   imports: [
     CommonModule,
-    FormsModule,
-    ReactiveFormsModule,
     SharedModule,
     CoreModule,
+    ReactiveFormsModule,
     FormRoutingModule
   ],
   declarations: [CheckTwIdComponent],

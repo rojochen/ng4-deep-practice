@@ -1,19 +1,12 @@
-import {
-  Component,
-  OnInit
-} from '@angular/core';
-import {
-  FormBuilder,
-  FormControl,
-  FormGroup,
-  Validators
-} from '@angular/forms';
+import { Component, OnInit } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+
+
 // validation
 import { hasExclamationMark, CheckTaiwanID } from '../../shared/validation';
-
 // log service
 import { LoggerService } from '../../core/service/logger.service';
-
+import { debug } from 'util';
 
 @Component({
   selector: 'app-check-tw-id',
@@ -23,35 +16,35 @@ import { LoggerService } from '../../core/service/logger.service';
 export class CheckTwIdComponent implements OnInit {
   loginForm: FormGroup;
   constructor(
-    private builder: FormBuilder,
+    private fb: FormBuilder,
     private log: LoggerService
   ) {
     // loginForm group
-    this.loginForm = builder.group({
-      username: new FormControl('', [
-        Validators.required, // 為必填
-        Validators.minLength(5) //最短長度為5
-      ]),
-      password: new FormControl('', [
-        Validators.required, //為必填
-        hasExclamationMark // 自定義的驗證
-      ]),
-      name: new FormControl('', [
+    this.loginForm = this.fb.group({
+      username: ['', [
         Validators.required,
-      ]),
-      identity: new FormControl('', [
-        Validators.required, // 為必填
-        CheckTaiwanID //自定義的驗證
-      ])
+        Validators.minLength(5)
+      ]],
+      password: ['', [
+        Validators.required,
+        hasExclamationMark
+      ]],
+      name: ['', [
+        Validators.required,
+      ]],
+      identity: ['', [
+        Validators.required,
+        CheckTaiwanID
+      ]]
     });
-    // 用來觀察表格元素的變化
-    // this.loginForm.valueChanges.subscribe((form: any) => {
-    //   this.log.debug(form)
-    // });
+
   }
 
   ngOnInit() {
-
+    // 用來觀察表格元素的變化
+    this.loginForm.valueChanges.subscribe((form: any) => {
+      this.log.debug(form)
+    });
   }
   // form 送出
   login(value: any) {
