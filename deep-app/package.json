@@ -9,6 +9,7 @@
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e",
+    "prod": "ng serve --env=prod",
     "dev": "ng serve --env=dev",
     "sit": "ng serve --env=sit",
     "uat": "ng serve --env=uat"
