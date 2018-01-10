@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { BroadcasterService } from '../../../service/broadcaster.service';
+import { BroadcasterService } from '../../../shared/service/broadcaster.service';
 
 @Component({
   selector: 'app-broadone',

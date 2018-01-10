@@ -12,7 +12,6 @@ import { SharedModule } from './shared/shared.module';
 // route module
 import { AppRoutingModule } from './app-routing.module';
 
-import { BroadcasterService } from './service/broadcaster.service';
 @NgModule({
   declarations: [
     AppComponent,
@@ -24,7 +23,7 @@ import { BroadcasterService } from './service/broadcaster.service';
     SharedModule,
     AppRoutingModule
   ],
-  providers: [BroadcasterService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

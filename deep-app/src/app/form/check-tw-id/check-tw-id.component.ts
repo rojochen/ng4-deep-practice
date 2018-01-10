@@ -3,7 +3,7 @@ import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 
 // validation
-import { hasExclamationMark, CheckTaiwanID } from '../../shared/validation';
+import { hasExclamationMark, CheckTaiwanID } from '../../shared/common/validation';
 // log service
 import { LoggerService } from '../../core/service/logger.service';
 import { debug } from 'util';

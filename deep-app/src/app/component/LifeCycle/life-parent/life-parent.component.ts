@@ -11,7 +11,7 @@ import {
 } from '@angular/core';
 import { LoggerService } from '../../../core/service/logger.service';
 import { LifeCycleSvcService, ILifeCycleInfo } from '../life-cycle-svc.service';
-import { displayTime } from '../../../shared/uitl';
+import { displayTime } from '../../../shared/common/uitl';
 
 @Component({
   selector: 'app-life-parent',
