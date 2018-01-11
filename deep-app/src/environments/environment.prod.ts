@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  showDebugMessages: false,
+  apiUrl: 'http://example.com/api/'
 };
