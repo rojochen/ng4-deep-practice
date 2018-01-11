@@ -36,6 +36,6 @@ export class JsonPlaceholderService implements API_Method {
   ) { 
   }
   getAllUser(): Observable<any> {
-    return this.http.get(this.apiUrl + '/users');
+    return this.http.get<User[]>(this.apiUrl + '/users');
   }
 }
