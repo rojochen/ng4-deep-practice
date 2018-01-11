@@ -6,5 +6,5 @@
 export const environment = {
   production: false,
   showDebugMessages: true,
-  apiUrl: 'http://example.com/api/'
+  apiUrl: 'https://jsonplaceholder.typicode.com'
 };
