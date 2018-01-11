@@ -8,8 +8,6 @@ export class ApiInterceptorService implements HttpInterceptor {
   // HttpRequest 請求URL，header etc.
   // HttpHandler 處理攔截
   intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    //header set  Authorization token
-    // const authReq = req.clone({ headers: req.headers.set('Authorization', 'my-auth-token') });
-    return;
+    return next.handle(req);
   }
 }
