@@ -10,7 +10,7 @@ import { SharedModule } from '../shared/shared.module';
 import { ComponentRoutingModule } from './component-routing.module';
 
 // component 
-import { HomeComponent } from './Home/home.component';
+import { ComHomeComponent } from './Home/com-home.component';
 import { LifeParentComponent } from './LifeCycle/life-parent/life-parent.component';
 import { LifeChildComponent } from './LifeCycle/life-child/life-child.component';
 import { InputParentComponent } from './Input/input-parent/input-parent.component';
@@ -46,7 +46,7 @@ import { BypassSecurityComponent } from './BypassSecurity/bypass-security.compon
     ComponentRoutingModule
   ],
   declarations: [
-    HomeComponent,
+    ComHomeComponent,
     ContentComponent,
     LifeParentComponent,
     LifeChildComponent,

@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // component 
-import { HomeComponent } from './Home/home.component';
+import { ComHomeComponent } from './Home/com-home.component';
 import { LifeParentComponent } from './LifeCycle/life-parent/life-parent.component';
 import { InputParentComponent } from './Input/input-parent/input-parent.component';
 import { OutputParentComponent } from './Output/output-parent/output-parent.component';
@@ -14,7 +14,7 @@ import { BypassSecurityComponent } from './BypassSecurity/bypass-security.compon
 
 const optimizeRoutes: Routes = [
     {
-        path: 'home', component: HomeComponent,
+        path: 'home', component: ComHomeComponent,
         children: [
             { path: '', redirectTo: 'life-demo', pathMatch: 'full' },
             { path: 'life-demo', component: LifeParentComponent },

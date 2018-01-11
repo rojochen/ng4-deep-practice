@@ -1,0 +1,23 @@
+<form class="form-group" [formGroup]="userLogin" (ngSubmit)="login(userLogin.value)">
+  <div class="form-group has-feedback" [ngClass]="{'has-error': !userLogin.get('username').valid && userLogin.get('username').touched}">
+    <label class="control-label">使用者名稱</label>
+    <input class="form-control" type="text" placeholder="Louis" formControlName="username">
+    <div class="alert alert-danger" *ngIf="(userLogin.get('username').dirty && userLogin.get('username').hasError('required')) ||
+                                           (userLogin.get('username').touched && userLogin.get('username').hasError('required'))">
+      請輸入使用者名稱
+    </div>
+  </div>
+  <!-- password -->
+  <div class="form-group" [ngClass]="{ 'has-error': !userLogin.get('password').valid && userLogin.get('password').touched}">
+    <label class="control-label">密碼</label>
+    <input class="form-control" type="password" placeholder="123456" formControlName="password">
+    <!-- .hasError('required') 代表必須要填 -->
+    <div class="alert alert-danger" *ngIf="(userLogin.get('password').dirty && userLogin.get('password').hasError('required')) || 
+                                           (userLogin.get('password').touched &&  userLogin.get('password').hasError('required'))">
+      請輸入密碼
+    </div>
+  </div>
+  <button class="btn btn-primary" type="submit" [disabled]="!userLogin.valid">登入</button>
+</form>
+
+<a *ngIf="false" href="https://alligator.io/angular/route-guards/">參考連結</a>
