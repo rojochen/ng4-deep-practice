@@ -1,0 +1,5 @@
+<h3>Bypass Security Component</h3>
+
+<h4>Resource URL:</h4>
+{{videoUrl | safe:'resourceUrl'}}
+<iframe class="e2e-iframe-trusted-src" width="640" height="390" [src]="videoUrl | safe:'resourceUrl'" frameborder="0" allowfullscreen></iframe>

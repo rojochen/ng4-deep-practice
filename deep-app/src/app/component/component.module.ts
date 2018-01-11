@@ -32,6 +32,7 @@ import { ExePaginationComponent } from './Extends/exe-pagination/exe-pagination.
 import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
 import { BroadoneComponent } from './Broadcaster/broadone/broadone.component';
 import { BroadtwoComponent } from './Broadcaster/broadtwo/broadtwo.component';
+import { BypassSecurityComponent } from './BypassSecurity/bypass-security.component';
 
 
 
@@ -66,7 +67,8 @@ import { BroadtwoComponent } from './Broadcaster/broadtwo/broadtwo.component';
     ExtendsComponent,
     BroadHomeComponent,
     BroadoneComponent,
-    BroadtwoComponent
+    BroadtwoComponent,
+    BypassSecurityComponent
   ],
   exports: []
 })

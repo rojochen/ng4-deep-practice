@@ -4,13 +4,14 @@ import { NavLinkColorDirective } from './directive/nav-link-color.directive';
 import { NameValidatorDirective } from './directive/name-validator.directive';
 
 import { BroadcasterService } from './service/broadcaster.service';
+import { SafePipe } from './pipe/safe.pipe';
 @NgModule({
   imports: [
     CommonModule
   ],
-  declarations: [NavLinkColorDirective, NameValidatorDirective],
+  declarations: [NavLinkColorDirective, NameValidatorDirective, SafePipe],
   exports: [
-    NavLinkColorDirective, NameValidatorDirective
+    NavLinkColorDirective, NameValidatorDirective, SafePipe
   ],
   providers: [
     BroadcasterService

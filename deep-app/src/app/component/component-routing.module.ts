@@ -10,6 +10,7 @@ import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-pare
 import { ContentComponent } from './Content/content.component';
 import { ExtendsComponent } from './extends/extends.component';
 import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
+import { BypassSecurityComponent } from './BypassSecurity/bypass-security.component';
 
 const optimizeRoutes: Routes = [
     {
@@ -29,7 +30,8 @@ const optimizeRoutes: Routes = [
             },
             { path: 'content-demo', component: ContentComponent },
             { path: 'component-Inheritance-demo', component: ExtendsComponent },
-            { path: 'broadcaster', component: BroadHomeComponent }
+            { path: 'broadcaster', component: BroadHomeComponent },
+            { path: 'bypass-security', component: BypassSecurityComponent }
         ]
     }
 ];
