@@ -5,11 +5,16 @@ import { Component, OnInit } from '@angular/core';
   templateUrl: './directive-demo.component.html',
   styleUrls: ['./directive-demo.component.css']
 })
-export class DirectiveDemoComponent implements OnInit {
+export class DirectiveDemoComponent {
 
+  arrayList: any[] = [1, 2, 3, 4, 5, 6];
   constructor() { }
 
-  ngOnInit() {
+  rerun(){
+    this.arrayList = [];
+    setTimeout(() => {
+      this.arrayList = [1, 2, 3, 4, 5, 6];
+    }, 200);
   }
 
 }
