@@ -1,5 +1,6 @@
 import { Component, OnInit, Inject } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { Router, ActivatedRoute } from '@angular/router';
 import { JsonPlaceholderService, User } from '../../core/service/json-placeholder.service';
 import { Observable } from 'rxjs/Observable';
 @Component({
@@ -9,9 +10,14 @@ import { Observable } from 'rxjs/Observable';
 })
 export class RouteHomeComponent implements OnInit {
   userLogin: FormGroup;
+  return: string = '';
+  userList: User[];
+  messageFlag: boolean;
   constructor(
     private api: JsonPlaceholderService,
-    private fb: FormBuilder
+    private fb: FormBuilder,
+    private router: Router,
+    private route: ActivatedRoute
   ) {
     this.userLogin = this.fb.group({
       username: ['', [Validators.required]],
@@ -20,13 +26,21 @@ export class RouteHomeComponent implements OnInit {
   }
 
   ngOnInit() {
-    // this.api.getAllUser().subscribe(res => {
-    //   console.log(res);
-    // })
-    // console.log('this.api.getAllUser(): ', this.api.getAllUser());
+    this.api.getAllUser().subscribe(res => {
+      this.userList = res;
+    });
   }
-  // form 送出
   login(value: any) {
-    // Attempt Logging in...
+    if (value.username === 'Louis' || value.password === '123456') {
+      localStorage.setItem('login', 'ok');
+      this.router.navigate(['/route/user']);
+      setTimeout(() => {
+        localStorage.removeItem('login');
+      }, 1000);
+    } else {
+      this.userLogin.reset();
+      this.messageFlag = true;
+      // console.log('this.userLogin: ', this.userLogin);
+    }
   }
 }

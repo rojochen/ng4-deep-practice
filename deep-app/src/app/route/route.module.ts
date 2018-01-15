@@ -5,6 +5,8 @@ import { CoreModule } from '../core/core.module';
 import { SharedModule } from '../shared/shared.module';
 import { RouteRoutingModule } from './route-routing.module';
 import { RouteHomeComponent } from './home/route-home.component';
+import { UserDetailComponent } from './user-detail/user-detail.component';
+import { UserComponent } from './user/user.component';
 
 @NgModule({
   imports: [
@@ -14,6 +16,6 @@ import { RouteHomeComponent } from './home/route-home.component';
     SharedModule,
     RouteRoutingModule
   ],
-  declarations: [RouteHomeComponent]
+  declarations: [RouteHomeComponent, UserDetailComponent, UserComponent]
 })
 export class RouteModule { }

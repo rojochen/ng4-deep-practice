@@ -1,0 +1,10 @@
+.alert-fixed {
+    position: absolute;
+    right: 15px;
+    top: 45px;
+    margin-right: auto;
+    margin-left: auto;
+    min-height: 3em;
+    width: 30%;
+    z-index: 9999;
+}

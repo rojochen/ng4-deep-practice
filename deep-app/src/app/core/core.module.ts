@@ -19,6 +19,7 @@ export function apiConfigFactory(): Configuration {
 import { LoggerService } from './service/logger.service';
 import { ApiInterceptorService } from './service/api-interceptor.service';
 import { JsonPlaceholderService } from './service/json-placeholder.service';
+import { AuthGuard } from './service/auth.guard';
 console.log('environment: ', environment);
 
 @NgModule({
@@ -30,6 +31,7 @@ console.log('environment: ', environment);
   providers: [
     LoggerService,
     JsonPlaceholderService,
+    AuthGuard,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ApiInterceptorService,

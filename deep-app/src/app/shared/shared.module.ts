@@ -6,6 +6,7 @@ import { DelayDirective } from './directive/delay.directive';
 
 import { BroadcasterService } from './service/broadcaster.service';
 import { SafePipe } from './pipe/safe.pipe';
+import { AlertMessageComponent } from './alert-message/alert-message.component';
 @NgModule({
   imports: [
     CommonModule
