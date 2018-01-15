@@ -34,13 +34,8 @@ export class RouteHomeComponent implements OnInit {
     if (value.username === 'Louis' || value.password === '123456') {
       localStorage.setItem('login', 'ok');
       this.router.navigate(['/route/user']);
-      setTimeout(() => {
-        localStorage.removeItem('login');
-      }, 1000);
     } else {
       this.userLogin.reset();
-      this.messageFlag = true;
-      // console.log('this.userLogin: ', this.userLogin);
     }
   }
 }
