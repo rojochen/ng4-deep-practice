@@ -17,7 +17,7 @@ const appRoutes: Routes = [
     { path: 'form', loadChildren: './form/form.module#FormModule' },
     { path: 'optimize', loadChildren: './optimize/optimize.module#OptimizeModule' },
     { path: 'component', loadChildren: './component/component.module#ComponentModule' },
-    { path: 'route', loadChildren: './route/route.module#RouteModule' },
+    { path: 'resolve', loadChildren: './route/route.module#RouteModule' },
     { path: 'directive', component: DirectiveDemoComponent },
     { path: '**', redirectTo: '' }
 ];

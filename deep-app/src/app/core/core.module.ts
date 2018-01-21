@@ -20,6 +20,9 @@ import { LoggerService } from './service/logger.service';
 import { ApiInterceptorService } from './service/api-interceptor.service';
 import { JsonPlaceholderService } from './service/json-placeholder.service';
 import { AuthGuard } from './service/auth.guard';
+import { UserService } from './service/user.service';
+import { UserInfoService } from './service/user-info.service';
+import { CoreRouteService } from './service/core-route.service';
 console.log('environment: ', environment);
 
 @NgModule({
@@ -38,7 +41,10 @@ console.log('environment: ', environment);
       multi: true,
     },
     { provide: 'API_URL', useValue: environment.apiUrl },
-    { provide: Configuration, useFactory: apiConfigFactory }
+    { provide: Configuration, useFactory: apiConfigFactory },
+    UserService,
+    UserInfoService,
+    CoreRouteService
   ],
   declarations: [HeaderComponent, FooterComponent],
   exports: [HeaderComponent, FooterComponent]

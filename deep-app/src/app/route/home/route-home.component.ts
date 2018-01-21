@@ -33,7 +33,7 @@ export class RouteHomeComponent implements OnInit {
   login(value: any) {
     if (value.username === 'Louis' || value.password === '123456') {
       localStorage.setItem('login', 'ok');
-      this.router.navigate(['/route/user']);
+      this.router.navigate(['/resolve/user']);
     } else {
       this.userLogin.reset();
     }

@@ -1,3 +1,10 @@
-<p>
-  user works!
-</p>
+<ng-container *ngFor="let user of userList">
+  <div class="user" (click)="jumpToUserInfo(user.id)">
+    <div class="img">
+      <div class="glyphicon glyphicon-user"></div>
+    </div>
+    <div class="content">
+      <div>{{user.name}}</div>
+    </div>
+  </div>
+</ng-container>
