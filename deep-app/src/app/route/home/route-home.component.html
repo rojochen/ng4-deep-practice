@@ -12,11 +12,13 @@
     <label class="control-label">密碼</label>
     <input class="form-control" type="password" placeholder="123456" formControlName="password">
     <!-- .hasError('required') 代表必須要填 -->
-    <div class="alert alert-danger" *ngIf="(userLogin.get('password').dirty && userLogin.get('password').hasError('required')) || 
+    <div class="alert alert-danger" *ngIf="(userLogin.get('password').dirty && userLogin.get('password').hasError('required')) ||
                                            (userLogin.get('password').touched &&  userLogin.get('password').hasError('required'))">
       請輸入密碼
     </div>
   </div>
   <button class="btn btn-primary" type="submit" [disabled]="!userLogin.valid">登入</button>
+  <br/>
+  <div class="btn btn-warning cross-to" routerLink="/resolve/user">不登入直接導頁到user頁面</div>
 </form>
 <a *ngIf="false" href="https://alligator.io/angular/route-guards/">參考連結</a>
