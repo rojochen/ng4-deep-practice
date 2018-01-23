@@ -38,4 +38,8 @@ export class RouteHomeComponent implements OnInit {
       this.userLogin.reset();
     }
   }
+
+  goToPage(){
+    this.router.navigate(['/resolve/user']);
+  }
 }
