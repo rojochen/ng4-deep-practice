@@ -31,39 +31,39 @@ export class LifeChildComponent implements
     private Log: LoggerService,
     private LifeCycleSvc: LifeCycleSvcService
   ) {
-    this.Log.error('life child constructor');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'life child constructor' }]);
+    this.Log.error('child constructor');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'child constructor' }]);
   }
   ngOnChanges() {
-    this.Log.error('life child ngOnChanges');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'life child ngOnChanges' }]);
+    this.Log.error('child ngOnChanges');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'child ngOnChanges' }]);
   }
   ngOnInit() {
-    this.Log.error('life child ngOnInit');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'life child ngOnInit' }]);
+    this.Log.error('child ngOnInit');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'child ngOnInit' }]);
   }
   ngDoCheck() {
-    this.Log.error('life child ngDoCheck');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'life child ngDoCheck' }]);
+    this.Log.error('child ngDoCheck');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'child ngDoCheck' }]);
   }
   ngAfterContentInit() {
-    this.Log.error('life child ngAfterContentInit');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'life child ngAfterContentInit' }]);
+    this.Log.error('child ngAfterContentInit');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'child ngAfterContentInit' }]);
   }
   ngAfterContentChecked() {
-    this.Log.error('life child ngAfterContentChecked');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'life child ngAfterContentChecked' }]);
+    this.Log.error('child ngAfterContentChecked');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'child ngAfterContentChecked' }]);
   }
   ngAfterViewInit() {
-    this.Log.error('life child ngAfterViewInit');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'life child ngAfterViewInit' }]);
+    this.Log.error('child ngAfterViewInit');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'child ngAfterViewInit' }]);
   }
   ngAfterViewChecked() {
-    this.Log.error('life child ngAfterViewChecked');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'life child ngAfterViewChecked' }]);
+    this.Log.error('child ngAfterViewChecked');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'child ngAfterViewChecked' }]);
   }
   ngOnDestroy() {
-    this.Log.error('life child ngOnDestroy');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'life child ngOnDestroy' }]);
+    this.Log.error('child ngOnDestroy');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'child', lifeType: 'child ngOnDestroy' }]);
   }
 }
