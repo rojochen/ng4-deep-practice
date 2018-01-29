@@ -12,9 +12,9 @@ import { FieldErrorDisplayComponent } from './component/field-error-display/fiel
   imports: [
     CommonModule
   ],
-  declarations: [NavLinkColorDirective, NameValidatorDirective, DelayDirective, SafePipe, FieldErrorDisplayComponent],
+  declarations: [NavLinkColorDirective, NameValidatorDirective, DelayDirective, SafePipe, FieldErrorDisplayComponent, AlertMessageComponent],
   exports: [
-    NavLinkColorDirective, NameValidatorDirective, DelayDirective, SafePipe, FieldErrorDisplayComponent
+    NavLinkColorDirective, NameValidatorDirective, DelayDirective, SafePipe, FieldErrorDisplayComponent, AlertMessageComponent
   ],
   providers: [
     BroadcasterService
