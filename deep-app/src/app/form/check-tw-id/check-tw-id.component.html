@@ -1,9 +1,9 @@
 <h2>
   Form with Validations</h2>
-<form class="form-group" [formGroup]="loginForm" (ngSubmit)="login(loginForm.value)">
+<form class="form-group" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
   <!-- userName -->
   <!-- 填寫的值必須有效且可以讓使用者點擊過一次之後才會顯示 Error ( ngClass 使顏色改變) -->
-  <div class="form-group has-feedback" [ngClass]="{'has-error': !loginForm.get('username').valid && loginForm.get('username').touched}">
+      <div class="form-group has-feedback" [ngClass]="displayFieldCss('username')">
     <label class="control-label">使用者名稱</label>
     <input class="form-control" type="text" placeholder="請輸入使用者名稱" formControlName="username">
     <!-- .hasError('minlength') 代表太短 -->
@@ -17,7 +17,7 @@
     </div>
   </div>
   <!-- password -->
-  <div class="form-group" [ngClass]="{ 'has-error': !loginForm.get('password').valid && loginForm.get('password').touched}">
+  <div class="form-group" [ngClass]="displayFieldCss('password')">
     <label class="control-label">密碼</label>
     <input class="form-control" type="password" placeholder="請輸入密碼" formControlName="password">
     <!-- .hasError('required') 代表必須要填 -->
@@ -33,7 +33,7 @@
     </div>
   </div>
   <!-- name -->
-  <div class="form-group" [ngClass]="{ 'has-error': !loginForm.get('name').valid && loginForm.get('name').touched}">
+  <div class="form-group" [ngClass]="displayFieldCss('name')">
     <label class="control-label">真實姓名</label>
     <input class="form-control" type="text" placeholder="請輸入真實姓名" nameValidate formControlName="name">
     <!-- .hasError('required') 代表必須要填 -->
@@ -49,7 +49,7 @@
     </div>
   </div>
   <!-- identity -->
-  <div class="form-group" [ngClass]="{ 'has-error': !loginForm.get('identity').valid && loginForm.get('identity').touched}">
+  <div class="form-group" [ngClass]="displayFieldCss('identity')">
     <label class="control-label">身分證號碼</label>
     <input class="form-control" type="text" placeholder="請輸入身分證字號" formControlName="identity">
 
@@ -68,4 +68,5 @@
   </div>
   <!-- 貼心小提醒 type:submit 當你在最後一個input按enter的時候 form表單會送出,所以如果不想送出type請設定button -->
   <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">登入</button>
+  
 </form>
