@@ -40,16 +40,25 @@ export class CheckTwIdComponent implements OnInit {
 
   }
 
+  isFieldValid(field: string): boolean {
+    return !this.loginForm.get(field).valid && this.loginForm.get(field).touched;
+  }
+
+  displayFieldCss(field: string) {
+    return {
+      'has-error': this.isFieldValid(field),
+    };
+  }
+
+  // form submit
+  onSubmit(value: any): void {
+    this.log.debug(value);
+  }
+
   ngOnInit() {
     // 用來觀察表格元素的變化
     this.loginForm.valueChanges.subscribe((form: any) => {
-      this.log.debug(form)
+      this.log.debug(form);
     });
   }
-  // form 送出
-  login(value: any) {
-    this.log.debug(value);
-    // Attempt Logging in...
-  }
-
 }
