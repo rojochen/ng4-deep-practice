@@ -10,7 +10,7 @@ import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-pare
 import { ContentComponent } from './Content/content.component';
 import { ExtendsComponent } from './extends/extends.component';
 import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
-import { BypassSecurityComponent } from './BypassSecurity/bypass-security.component';
+import { BypassSecurityComponent } from './bypass-security/bypass-security.component';
 
 const optimizeRoutes: Routes = [
     {
