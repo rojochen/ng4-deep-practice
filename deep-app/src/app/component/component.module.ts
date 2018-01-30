@@ -32,7 +32,7 @@ import { ExePaginationComponent } from './Extends/exe-pagination/exe-pagination.
 import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
 import { BroadOneComponent } from './Broadcaster/broad-one/broad-one.component';
 import { BroadTwoComponent } from './Broadcaster/broad-two/broad-two.component';
-import { BypassSecurityComponent } from './BypassSecurity/bypass-security.component';
+import { BypassSecurityComponent } from './bypass-security/bypass-security.component';
 
 
 
