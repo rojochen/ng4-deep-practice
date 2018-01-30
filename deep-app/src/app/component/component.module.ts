@@ -15,11 +15,11 @@ import { ComHomeComponent } from './Home/com-home.component';
 import { LifeParentComponent } from './Life-cycle/life-parent/life-parent.component';
 import { LifeChildComponent } from './Life-cycle/life-child/life-child.component';
 // input
-import { InputParentComponent } from './Input/input-parent/input-parent.component';
-import { InputChildComponent } from './Input/input-child/input-child.component';
+import { InputParentComponent } from './input/input-parent/input-parent.component';
+import { InputChildComponent } from './input/input-child/input-child.component';
 // output
-import { OutputChildComponent } from './Output/output-child/output-child.component';
-import { OutputParentComponent } from './Output/output-parent/output-parent.component';
+import { OutputChildComponent } from './output/output-child/output-child.component';
+import { OutputParentComponent } from './output/output-parent/output-parent.component';
 // extends
 import { ExtendsComponent } from './extends/extends.component';
 import { SimplePaginationComponent } from './Extends/simple-pagination/simple-pagination.component';
@@ -38,9 +38,9 @@ import { ChildComponent } from './content/child/child/child.component';
 // content-childer
 import { ContentChildrenParentComponent } from './content/children/content-children-parent/content-children-parent.component';
 import { ContentChildrenChildComponent } from './content/children/content-children-child/content-children-child.component';
-
-import { ViewChildParentComponent } from './ViewChild/view-child-parent/view-child-parent.component';
-import { ViewChildChildComponent } from './ViewChild/view-child-child/view-child-child.component';
+// view-child
+import { ViewChildParentComponent } from './view-child/view-child-parent/view-child-parent.component';
+import { ViewChildChildComponent } from './view-child/view-child-child/view-child-child.component';
 import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-parent/view-childer-parent.component';
 import { ViewChilderChildComponent } from './ViewChilderChild/view-childer-child/view-childer-child.component';
 

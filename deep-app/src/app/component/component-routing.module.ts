@@ -3,9 +3,9 @@ import { Routes, RouterModule } from '@angular/router';
 // component 
 import { ComHomeComponent } from './Home/com-home.component';
 import { LifeParentComponent } from './Life-cycle/life-parent/life-parent.component';
-import { InputParentComponent } from './Input/input-parent/input-parent.component';
-import { OutputParentComponent } from './Output/output-parent/output-parent.component';
-import { ViewChildParentComponent } from './ViewChild/view-child-parent/view-child-parent.component';
+import { InputParentComponent } from './input/input-parent/input-parent.component';
+import { OutputParentComponent } from './output/output-parent/output-parent.component';
+import { ViewChildParentComponent } from './view-child/view-child-parent/view-child-parent.component';
 import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-parent/view-childer-parent.component';
 import { ContentComponent } from './content/content.component';
 import { ExtendsComponent } from './extends/extends.component';
