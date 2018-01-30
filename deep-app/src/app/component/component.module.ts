@@ -35,7 +35,7 @@ import { ContentComponent } from './content/content.component';
 // content-child
 import { ParentComponent } from './content/child/parent/parent.component';
 import { ChildComponent } from './content/child/child/child.component';
-// content-childer
+// content-children
 import { ContentChildrenParentComponent } from './content/children/content-children-parent/content-children-parent.component';
 import { ContentChildrenChildComponent } from './content/children/content-children-child/content-children-child.component';
 // view-child
