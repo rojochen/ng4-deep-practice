@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // component 
 import { ComHomeComponent } from './Home/com-home.component';
-import { LifeParentComponent } from './LifeCycle/life-parent/life-parent.component';
+import { LifeParentComponent } from './Life-cycle/life-parent/life-parent.component';
 import { InputParentComponent } from './Input/input-parent/input-parent.component';
 import { OutputParentComponent } from './Output/output-parent/output-parent.component';
 import { ViewChildParentComponent } from './ViewChild/view-child-parent/view-child-parent.component';
