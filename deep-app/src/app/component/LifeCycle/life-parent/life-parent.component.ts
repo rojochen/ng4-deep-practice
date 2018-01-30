@@ -34,41 +34,41 @@ export class LifeParentComponent implements
     private Log: LoggerService,
     private LifeCycleSvc: LifeCycleSvcService
   ) {
-    this.Log.debug('life parent constructor');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent constructor' }]);
+    this.Log.debug('parent constructor');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'parent constructor' }]);
     this.LifeCycleStatusList = this.getLifeCycleData();
   }
   ngOnChanges() {
     this.Log.debug('life parent ngOnChanges');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent ngOnChanges' }]);
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'parent ngOnChanges' }]);
   }
   ngOnInit() {
     this.Log.debug('life parent ngOnInit');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent ngOnInit' }]);
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'parent ngOnInit' }]);
   }
   ngDoCheck() {
-    this.Log.debug('life parent ngDoCheck');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent ngDoCheck' }]);
+    this.Log.debug('parent ngDoCheck');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'parent ngDoCheck' }]);
   }
   ngAfterContentInit() {
-    this.Log.debug('life parent ngAfterContentInit');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent ngAfterContentInit' }]);
+    this.Log.debug('parent ngAfterContentInit');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'parent ngAfterContentInit' }]);
   }
   ngAfterContentChecked() {
-    this.Log.debug('life parent ngAfterContentChecked');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent ngAfterContentChecked' }]);
+    this.Log.debug('parent ngAfterContentChecked');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'parent ngAfterContentChecked' }]);
   }
   ngAfterViewInit() {
-    this.Log.debug('life parent ngAfterViewInit');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent ngAfterViewInit' }]);
+    this.Log.debug('parent ngAfterViewInit');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'parent ngAfterViewInit' }]);
   }
   ngAfterViewChecked() {
-    this.Log.debug('life parent ngAfterViewChecked');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent ngAfterViewChecked' }]);
+    this.Log.debug('parent ngAfterViewChecked');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'parent ngAfterViewChecked' }]);
   }
   ngOnDestroy() {
-    this.Log.debug('life parent ngOnDestroy');
-    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'life parent ngOnDestroy' }]);
+    this.Log.debug('parent ngOnDestroy');
+    this.LifeCycleSvc.pushLifeCycle([{ location: 'parent', lifeType: 'parent ngOnDestroy' }]);
   }
   getLifeCycleData() {
     return new Promise((resolve, reject) => {
