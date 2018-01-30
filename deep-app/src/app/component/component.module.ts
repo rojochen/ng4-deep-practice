@@ -11,8 +11,8 @@ import { ComponentRoutingModule } from './component-routing.module';
 
 // component 
 import { ComHomeComponent } from './Home/com-home.component';
-import { LifeParentComponent } from './LifeCycle/life-parent/life-parent.component';
-import { LifeChildComponent } from './LifeCycle/life-child/life-child.component';
+import { LifeParentComponent } from './Life-cycle/life-parent/life-parent.component';
+import { LifeChildComponent } from './Life-cycle/life-child/life-child.component';
 import { InputParentComponent } from './Input/input-parent/input-parent.component';
 import { InputChildComponent } from './Input/input-child/input-child.component';
 import { OutputChildComponent } from './Output/output-child/output-child.component';
