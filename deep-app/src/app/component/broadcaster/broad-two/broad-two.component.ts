@@ -1,11 +1,11 @@
 import { Component, OnInit } from '@angular/core';
 import { BroadcasterService } from '../../../shared/service/broadcaster.service';
 @Component({
-  selector: 'app-broadtwo',
-  templateUrl: './broadtwo.component.html',
-  styleUrls: ['./broadtwo.component.css']
+  selector: 'app-broad-two',
+  templateUrl: './broad-two.component.html',
+  styleUrls: ['./broad-two.component.css']
 })
-export class BroadtwoComponent implements OnInit {
+export class BroadTwoComponent implements OnInit {
   message: string;
   constructor(private broadcaster: BroadcasterService) { }
 
