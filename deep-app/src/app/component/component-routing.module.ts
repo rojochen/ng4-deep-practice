@@ -7,7 +7,7 @@ import { InputParentComponent } from './Input/input-parent/input-parent.componen
 import { OutputParentComponent } from './Output/output-parent/output-parent.component';
 import { ViewChildParentComponent } from './ViewChild/view-child-parent/view-child-parent.component';
 import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-parent/view-childer-parent.component';
-import { ContentComponent } from './Content/content.component';
+import { ContentComponent } from './content/content.component';
 import { ExtendsComponent } from './extends/extends.component';
 import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
 import { BypassSecurityComponent } from './bypass-security/bypass-security.component';

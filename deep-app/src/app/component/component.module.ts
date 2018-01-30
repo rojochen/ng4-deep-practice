@@ -11,28 +11,42 @@ import { ComponentRoutingModule } from './component-routing.module';
 
 // component 
 import { ComHomeComponent } from './Home/com-home.component';
+// life
 import { LifeParentComponent } from './Life-cycle/life-parent/life-parent.component';
 import { LifeChildComponent } from './Life-cycle/life-child/life-child.component';
+// input
 import { InputParentComponent } from './Input/input-parent/input-parent.component';
 import { InputChildComponent } from './Input/input-child/input-child.component';
+// output
 import { OutputChildComponent } from './Output/output-child/output-child.component';
 import { OutputParentComponent } from './Output/output-parent/output-parent.component';
-import { ContentComponent } from './Content/content.component';
-import { ParentComponent } from './Content/ContentChild/parent/parent.component';
-import { ChildComponent } from './Content/ContentChild/child/child.component';
-import { ContentChildrenParentComponent } from './Content/ContentChildren/content-children-parent/content-children-parent.component';
-import { ContentChildrenChildComponent } from './Content/ContentChildren/content-children-child/content-children-child.component';
+// extends
+import { ExtendsComponent } from './extends/extends.component';
+import { SimplePaginationComponent } from './Extends/simple-pagination/simple-pagination.component';
+import { ExePaginationComponent } from './Extends/exe-pagination/exe-pagination.component';
+// Broadcaster
+import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
+import { BroadOneComponent } from './Broadcaster/broad-one/broad-one.component';
+import { BroadTwoComponent } from './Broadcaster/broad-two/broad-two.component';
+// bypass-security
+import { BypassSecurityComponent } from './bypass-security/bypass-security.component';
+// content
+import { ContentComponent } from './content/content.component';
+// content-child
+import { ParentComponent } from './content/child/parent/parent.component';
+import { ChildComponent } from './content/child/child/child.component';
+// content-childer
+import { ContentChildrenParentComponent } from './content/children/content-children-parent/content-children-parent.component';
+import { ContentChildrenChildComponent } from './content/children/content-children-child/content-children-child.component';
+
 import { ViewChildParentComponent } from './ViewChild/view-child-parent/view-child-parent.component';
 import { ViewChildChildComponent } from './ViewChild/view-child-child/view-child-child.component';
 import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-parent/view-childer-parent.component';
 import { ViewChilderChildComponent } from './ViewChilderChild/view-childer-child/view-childer-child.component';
-import { ExtendsComponent } from './extends/extends.component';
-import { SimplePaginationComponent } from './Extends/simple-pagination/simple-pagination.component';
-import { ExePaginationComponent } from './Extends/exe-pagination/exe-pagination.component';
-import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
-import { BroadOneComponent } from './Broadcaster/broad-one/broad-one.component';
-import { BroadTwoComponent } from './Broadcaster/broad-two/broad-two.component';
-import { BypassSecurityComponent } from './bypass-security/bypass-security.component';
+
+
+
+
 
 
 
