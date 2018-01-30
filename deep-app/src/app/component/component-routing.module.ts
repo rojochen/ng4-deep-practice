@@ -2,14 +2,14 @@ import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 // component 
 import { ComHomeComponent } from './Home/com-home.component';
-import { LifeParentComponent } from './Life-cycle/life-parent/life-parent.component';
+import { LifeParentComponent } from './life-cycle/life-parent/life-parent.component';
 import { InputParentComponent } from './input/input-parent/input-parent.component';
 import { OutputParentComponent } from './output/output-parent/output-parent.component';
 import { ViewChildParentComponent } from './view-child/view-child-parent/view-child-parent.component';
-import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-parent/view-childer-parent.component';
+import { ViewChildrenParentComponent } from './view-children/view-children-parent/view-children-parent.component';
 import { ContentComponent } from './content/content.component';
 import { ExtendsComponent } from './extends/extends.component';
-import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
+import { BroadHomeComponent } from './broadcaster/broad-home/broad-home.component';
 import { BypassSecurityComponent } from './bypass-security/bypass-security.component';
 
 const optimizeRoutes: Routes = [
@@ -25,7 +25,7 @@ const optimizeRoutes: Routes = [
                 children: [
                     { path: '', redirectTo: 'child', pathMatch: 'full' },
                     { path: 'child', component: ViewChildParentComponent },
-                    { path: 'childer', component: ViewChilderParentComponent }
+                    { path: 'children', component: ViewChildrenParentComponent }
                 ]
             },
             { path: 'content-demo', component: ContentComponent },

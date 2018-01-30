@@ -12,8 +12,8 @@ import { ComponentRoutingModule } from './component-routing.module';
 // component 
 import { ComHomeComponent } from './Home/com-home.component';
 // life
-import { LifeParentComponent } from './Life-cycle/life-parent/life-parent.component';
-import { LifeChildComponent } from './Life-cycle/life-child/life-child.component';
+import { LifeParentComponent } from './life-cycle/life-parent/life-parent.component';
+import { LifeChildComponent } from './life-cycle/life-child/life-child.component';
 // input
 import { InputParentComponent } from './input/input-parent/input-parent.component';
 import { InputChildComponent } from './input/input-child/input-child.component';
@@ -22,12 +22,12 @@ import { OutputChildComponent } from './output/output-child/output-child.compone
 import { OutputParentComponent } from './output/output-parent/output-parent.component';
 // extends
 import { ExtendsComponent } from './extends/extends.component';
-import { SimplePaginationComponent } from './Extends/simple-pagination/simple-pagination.component';
-import { ExePaginationComponent } from './Extends/exe-pagination/exe-pagination.component';
+import { SimplePaginationComponent } from './extends/simple-pagination/simple-pagination.component';
+import { ExePaginationComponent } from './extends/exe-pagination/exe-pagination.component';
 // Broadcaster
-import { BroadHomeComponent } from './Broadcaster/broad-home/broad-home.component';
-import { BroadOneComponent } from './Broadcaster/broad-one/broad-one.component';
-import { BroadTwoComponent } from './Broadcaster/broad-two/broad-two.component';
+import { BroadHomeComponent } from './broadcaster/broad-home/broad-home.component';
+import { BroadOneComponent } from './broadcaster/broad-one/broad-one.component';
+import { BroadTwoComponent } from './broadcaster/broad-two/broad-two.component';
 // bypass-security
 import { BypassSecurityComponent } from './bypass-security/bypass-security.component';
 // content
@@ -41,8 +41,9 @@ import { ContentChildrenChildComponent } from './content/children/content-childr
 // view-child
 import { ViewChildParentComponent } from './view-child/view-child-parent/view-child-parent.component';
 import { ViewChildChildComponent } from './view-child/view-child-child/view-child-child.component';
-import { ViewChilderParentComponent } from './ViewChilderChild/view-childer-parent/view-childer-parent.component';
-import { ViewChilderChildComponent } from './ViewChilderChild/view-childer-child/view-childer-child.component';
+// view-children
+import { ViewChildrenParentComponent } from './view-children/view-children-parent/view-children-parent.component';
+import { ViewChildrenChildComponent } from './view-children/view-children-child/view-children-child.component';
 
 
 
@@ -72,8 +73,8 @@ import { ViewChilderChildComponent } from './ViewChilderChild/view-childer-child
     ChildComponent,
     ViewChildParentComponent,
     ViewChildChildComponent,
-    ViewChilderParentComponent,
-    ViewChilderChildComponent,
+    ViewChildrenParentComponent,
+    ViewChildrenChildComponent,
     ContentChildrenParentComponent,
     ContentChildrenChildComponent,
     SimplePaginationComponent,
