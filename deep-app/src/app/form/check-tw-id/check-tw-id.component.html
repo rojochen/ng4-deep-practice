@@ -2,34 +2,18 @@
   Form with Validations</h2>
 <form class="form-group" [formGroup]="loginForm" (ngSubmit)="onSubmit(loginForm.value)">
   <!-- userName -->
-  <!-- 填寫的值必須有效且可以讓使用者點擊過一次之後才會顯示 Error ( ngClass 使顏色改變) -->
   <div class="form-group has-feedback" [ngClass]="displayFieldCss('username')">
     <label class="control-label">使用者名稱</label>
     <input class="form-control" type="text" placeholder="請輸入使用者名稱" formControlName="username">
-    <!-- .hasError('minlength') 代表太短 -->
-    <div class="alert alert-danger" *ngIf="loginForm.get('username').hasError('minlength')">
-      不能少於五個字元
-    </div>
-    <!-- .hasError('required') 代表必須要填 -->
-    <div class="alert alert-danger" *ngIf="(loginForm.get('username').dirty && loginForm.get('username').hasError('required')) ||
-                                           (loginForm.get('username').touched && loginForm.get('username').hasError('required'))">
-      請輸入使用者名稱
-    </div>
+    <app-field-error-display [displayError]="validUserName('username').minlenght" errorMsg="不能少於五個字元"></app-field-error-display>
+    <app-field-error-display [displayError]="validUserName('username').required" errorMsg="請輸入使用者名稱"></app-field-error-display>
   </div>
   <!-- password -->
   <div class="form-group" [ngClass]="displayFieldCss('password')">
     <label class="control-label">密碼</label>
     <input class="form-control" type="password" placeholder="請輸入密碼" formControlName="password">
-
-    <app-field-error-display [displayError]="(loginForm.get('password').dirty && loginForm.get('password').hasError('required')) || 
-                                             (loginForm.get('password').touched &&  loginForm.get('password').hasError('required'))" 
-                                              errorMsg="請輸入密碼">
-    </app-field-error-display>
-    <app-field-error-display [displayError]="loginForm.get('password').hasError('needsExclamation') && 
-                                             loginForm.get('password').dirty && 
-                                             !loginForm.get('password').hasError('required')" 
-                                             errorMsg="你的密碼必須要有一個驚嘆號">
-    </app-field-error-display>
+    <app-field-error-display [displayError]="validPassword('password').required"  errorMsg="請輸入密碼"></app-field-error-display>
+    <app-field-error-display [displayError]="validPassword('password').customValid"  errorMsg="你的密碼必須要有一個驚嘆號"></app-field-error-display>
   </div>
   <!-- name -->
   <div class="form-group" [ngClass]="displayFieldCss('name')">
