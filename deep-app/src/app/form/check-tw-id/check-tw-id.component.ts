@@ -56,31 +56,39 @@ export class CheckTwIdComponent implements OnInit {
     return this.customFieldValid(field, 'hasError', 'required');
   }
 
+  isValidRequired(field: string): boolean {
+    return (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field));
+  }
+
+  isCustomValid(field: string, validkey: string) {
+    return this.customFieldValid(field, 'hasError', validkey) && this.customFieldValid(field, 'dirty') && !this.isRequired(field)
+  }
+
   validUserName(field: string) {
     return {
-      'minlenght': this.isMinLenght(field),
-      'required': (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field))
+      'required': this.isValidRequired(field),
+      'minlenght': this.isMinLenght(field)
     };
   }
 
   validPassword(field: string) {
     return {
-      'required': (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field)),
-      'customValid': this.customFieldValid(field, 'hasError', 'needsExclamation') && this.customFieldValid(field, 'dirty') && !this.isRequired(field)
+      'required': this.isValidRequired(field),
+      'customValid': this.isCustomValid(field, 'needsExclamation')
     };
   }
 
   validName(field: string) {
     return {
-      'required': (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field)),
-      'customValid': this.customFieldValid(field, 'hasError', 'nameValidate') && this.customFieldValid(field, 'dirty') && !this.isRequired(field)
+      'required': this.isValidRequired(field),
+      'customValid': this.isCustomValid(field, 'nameValidate')
     };
   }
 
   validIdentity(field: string) {
     return {
-      'required': (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field)),
-      'customValid': this.customFieldValid(field, 'hasError', 'identityValidate') && this.customFieldValid(field, 'dirty') && !this.isRequired(field)
+      'required': this.isValidRequired(field),
+      'customValid': this.isCustomValid(field, 'identityValidate')
     };
   }
 
