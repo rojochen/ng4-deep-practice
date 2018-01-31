@@ -1,0 +1,12 @@
+<div class="form-group">
+  <label for="exampleInputName2">Foods</label>
+  <input type="text" class="form-control" id="exampleInputName2" #food placeholder="新增食物">
+
+</div>
+<button type="button" class="btn btn-info" (click)="add(food)">Add</button>
+<button type="button" class="btn btn-info" (click)="removeLast()">Remove last</button>
+<button type="button" class="btn btn-info" (click)="addForPush(food)">Add</button>
+<button type="button" class="btn btn-info" (click)="removeLastForPush()">Remove last</button>
+<div class="container">
+    <app-food-list [foods]="foods" ></app-food-list>
+</div>

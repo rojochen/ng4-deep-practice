@@ -9,6 +9,11 @@ export class ZoneDemoComponent implements OnInit {
   count: number;
   constructor(private zone: NgZone) {
     this.count = 0;
+    zone.runOutsideAngular(() => {
+      for (let i = 0; i < 100; i++) {
+        setInterval(() => this.count++, 10);
+      }
+    });
   }
   refresh() {
     this.zone.run(() => {
@@ -16,12 +21,6 @@ export class ZoneDemoComponent implements OnInit {
     });
   }
   ngOnInit() {
-    //setInterval(() => this.count++, 10);
-    this.zone.runOutsideAngular(() => {
-      for (let i = 0; i < 100; i++) {
-        setInterval(() => this.count++, 10);
-      }
-    });
   }
 
 }

@@ -1,6 +1,6 @@
 import { Item } from './../model/item';
-import { Component, OnInit, Input,Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
- 
+import { Component, OnInit, Input, Output, EventEmitter, ChangeDetectionStrategy } from '@angular/core';
+
 @Component({
   selector: 'app-item-detail',
   templateUrl: './item-detail.component.html',
@@ -17,7 +17,7 @@ export class ItemDetailComponent implements OnInit {
   }
   change() {
     console.log(this.item);
-     
+
     this.item.updateDate = new Date();
     this.changeEvent.emit(this.item);
 

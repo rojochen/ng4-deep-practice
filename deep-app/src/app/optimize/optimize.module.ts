@@ -11,6 +11,9 @@ import { ItemDetailComponent } from './item-detail/item-detail.component';
 import { ItemMasterComponent } from './item-master/item-master.component';
 import { ZoneDemoComponent } from './zone-demo/zone-demo.component';
 import { DetectorRefDemoComponent } from './detector-ref-demo/detector-ref-demo.component';
+import { CounterComponent } from './counter/counter.component';
+import { DetectionStrategyDemoComponent } from './detection-strategy-demo/detection-strategy-demo.component';
+import { FoodListComponent } from './food-list/food-list.component';
 
 @NgModule({
   imports: [
@@ -18,7 +21,15 @@ import { DetectorRefDemoComponent } from './detector-ref-demo/detector-ref-demo.
     FormsModule,
     OptimizeRoutingModule
   ],
-  declarations: [HomeComponent, ItemDetailComponent, ItemMasterComponent, ZoneDemoComponent, DetectorRefDemoComponent],
+  declarations: [
+    HomeComponent,
+    ItemDetailComponent,
+    ItemMasterComponent,
+    ZoneDemoComponent,
+    DetectorRefDemoComponent,
+    CounterComponent,
+    DetectionStrategyDemoComponent,
+    FoodListComponent],
   exports: []
 })
 export class OptimizeModule { }

@@ -6,14 +6,18 @@ import { HomeComponent } from './home/home.component';
 import { ItemMasterComponent } from './item-master/item-master.component';
 import { ZoneDemoComponent } from './zone-demo/zone-demo.component';
 import { DetectorRefDemoComponent } from './detector-ref-demo/detector-ref-demo.component';
+import { CounterComponent } from './counter/counter.component';
+import { DetectionStrategyDemoComponent } from './detection-strategy-demo/detection-strategy-demo.component';
 
 const optimizeRoutes: Routes = [
-  { path: 'home', component: HomeComponent,
+  {
+    path: 'home', component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'zone-demo', pathMatch: 'full' },
+      { path: '', redirectTo: 'item', pathMatch: 'full' },
+      { path: 'counter', component: CounterComponent },
+      { path: 'detection-strategy-demo', component: DetectionStrategyDemoComponent },
       { path: 'zone-demo', component: ZoneDemoComponent },
-      { path: 'detector-ref-demo', component: DetectorRefDemoComponent },
-      { path: 'item', component: ItemMasterComponent }
+      { path: 'detector-ref-demo', component: DetectorRefDemoComponent }
     ]
   }
 ];
