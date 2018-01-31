@@ -1,0 +1,18 @@
+<div class="row">
+  <div class="panel panel-default">
+    <div class="panel-heading">View Children child 範例</div>
+    <div class="panel-body">
+      <app-view-children-child ok="Next" (close)="showAlert(2)">
+        Step 1: Learn angular
+      </app-view-children-child>
+      <app-view-children-child ok="Next" (close)="showAlert(3)">
+        Step 2: Love angular
+      </app-view-children-child>
+      <app-view-children-child ok="Close">
+        Step 3: Build app
+      </app-view-children-child>
+      <button class="btn btn-default" (click)="showAlert(1)">Show steps</button>
+    </div>
+  </div>
+  <button class="btn btn-default" [routerLink]="['../child']">go view-child</button>
+</div>

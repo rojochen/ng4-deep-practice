@@ -40,6 +40,58 @@ export class CheckTwIdComponent implements OnInit {
 
   }
 
+  customFieldValid(field: string, validkey: string, validInfo?: string) {
+    if (!validInfo) {
+      return this.loginForm.get(field)[validkey];
+    } else {
+      return this.loginForm.get(field)[validkey](validInfo);
+    }
+  }
+
+  isMinLenght(field: string): boolean {
+    return this.customFieldValid(field, 'hasError', 'minlength');
+  }
+
+  isRequired(field: string): boolean {
+    return this.customFieldValid(field, 'hasError', 'required');
+  }
+
+  isValidRequired(field: string): boolean {
+    return (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field));
+  }
+
+  isCustomValid(field: string, validkey: string) {
+    return this.customFieldValid(field, 'hasError', validkey) && this.customFieldValid(field, 'dirty') && !this.isRequired(field)
+  }
+
+  validUserName(field: string) {
+    return {
+      'required': this.isValidRequired(field),
+      'minlenght': this.isMinLenght(field)
+    };
+  }
+
+  validPassword(field: string) {
+    return {
+      'required': this.isValidRequired(field),
+      'customValid': this.isCustomValid(field, 'needsExclamation')
+    };
+  }
+
+  validName(field: string) {
+    return {
+      'required': this.isValidRequired(field),
+      'customValid': this.isCustomValid(field, 'nameValidate')
+    };
+  }
+
+  validIdentity(field: string) {
+    return {
+      'required': this.isValidRequired(field),
+      'customValid': this.isCustomValid(field, 'identityValidate')
+    };
+  }
+
   isFieldValid(field: string): boolean {
     return !this.loginForm.get(field).valid && this.loginForm.get(field).touched;
   }
