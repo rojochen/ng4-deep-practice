@@ -40,6 +40,37 @@ export class CheckTwIdComponent implements OnInit {
 
   }
 
+  customFieldValid(field: string, validkey: string, validInfo?: string) {
+    if (!validInfo) {
+      return this.loginForm.get(field)[validkey];
+    } else {
+      return this.loginForm.get(field)[validkey](validInfo);
+    }
+  }
+
+  isMinLenght(field: string): boolean {
+    return this.customFieldValid(field, 'hasError', 'minlength');
+  }
+
+  isRequired(field: string): boolean {
+    return this.customFieldValid(field, 'hasError', 'required');
+  }
+
+  validUserName(field: string) {
+    return {
+      'minlenght': this.isMinLenght(field),
+      'required': (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field))
+    };
+  }
+  // loginForm.get('password').hasError('needsExclamation') && loginForm.get('password').dirty && !loginForm.get('password').hasError('required')
+
+  validPassword(field: string) {
+    return {
+      'required': (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field)),
+      'customValid': this.customFieldValid(field, 'hasError', 'needsExclamation') && this.customFieldValid(field, 'dirty') && !this.isRequired(field)
+    };
+  }
+
   isFieldValid(field: string): boolean {
     return !this.loginForm.get(field).valid && this.loginForm.get(field).touched;
   }
