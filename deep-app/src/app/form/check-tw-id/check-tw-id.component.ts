@@ -62,12 +62,25 @@ export class CheckTwIdComponent implements OnInit {
       'required': (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field))
     };
   }
-  // loginForm.get('password').hasError('needsExclamation') && loginForm.get('password').dirty && !loginForm.get('password').hasError('required')
 
   validPassword(field: string) {
     return {
       'required': (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field)),
       'customValid': this.customFieldValid(field, 'hasError', 'needsExclamation') && this.customFieldValid(field, 'dirty') && !this.isRequired(field)
+    };
+  }
+
+  validName(field: string) {
+    return {
+      'required': (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field)),
+      'customValid': this.customFieldValid(field, 'hasError', 'nameValidate') && this.customFieldValid(field, 'dirty') && !this.isRequired(field)
+    };
+  }
+
+  validIdentity(field: string) {
+    return {
+      'required': (this.customFieldValid(field, 'dirty') && this.isRequired(field)) || (this.customFieldValid(field, 'touched') && this.isRequired(field)),
+      'customValid': this.customFieldValid(field, 'hasError', 'identityValidate') && this.customFieldValid(field, 'dirty') && !this.isRequired(field)
     };
   }
 

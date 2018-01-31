@@ -19,35 +19,15 @@
   <div class="form-group" [ngClass]="displayFieldCss('name')">
     <label class="control-label">真實姓名</label>
     <input class="form-control" type="text" placeholder="請輸入真實姓名" nameValidate formControlName="name">
-    <!-- .hasError('required') 代表必須要填 -->
-    <div class="alert alert-danger" *ngIf="(loginForm.get('name').dirty && loginForm.get('name').hasError('required')) ||
-                                           (loginForm.get('name').touched && loginForm.get('name').hasError('required'))">
-      請輸入姓名
-    </div>
-    <!-- .hasError('nameValidate') 自訂姓名驗證 -->
-    <div class="alert alert-danger" *ngIf="loginForm.get('name').hasError('nameValidate') &&
-                                           loginForm.get('name').dirty && 
-                                           !loginForm.get('name').hasError('required')">
-      姓名為中文或英文
-    </div>
+    <app-field-error-display [displayError]="validName('name').required"  errorMsg="請輸入姓名"></app-field-error-display>
+    <app-field-error-display [displayError]="validName('name').customValid"  errorMsg="姓名為中文或英文"></app-field-error-display>
   </div>
   <!-- identity -->
   <div class="form-group" [ngClass]="displayFieldCss('identity')">
     <label class="control-label">身分證號碼</label>
     <input class="form-control" type="text" placeholder="請輸入身分證字號" formControlName="identity">
-
-    <!-- .hasError('required') 代表必須要填 -->
-    <div class="alert alert-danger" *ngIf="(loginForm.get('identity').dirty && loginForm.get('identity').hasError('required')) ||
-                                           (loginForm.get('identity').touched && loginForm.get('identity').hasError('required'))">
-      請輸入身分證字號
-    </div>
-
-    <!-- .hasError('identityValidate') 自訂身份驗證 -->
-    <div class="alert alert-danger" *ngIf="loginForm.get('identity').hasError('identityValidate') &&
-                                           loginForm.get('identity').dirty && 
-                                           !loginForm.get('identity').hasError('required')">
-      身分證格式錯誤
-    </div>
+    <app-field-error-display [displayError]="validIdentity('identity').required"  errorMsg="請輸入身分證字號"></app-field-error-display>
+    <app-field-error-display [displayError]="validIdentity('identity').customValid"  errorMsg="身分證格式錯誤"></app-field-error-display>
   </div>
   <!-- 貼心小提醒 type:submit 當你在最後一個input按enter的時候 form表單會送出,所以如果不想送出type請設定button -->
   <button class="btn btn-primary" type="submit" [disabled]="!loginForm.valid">登入</button>
