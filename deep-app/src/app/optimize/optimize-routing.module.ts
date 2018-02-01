@@ -13,7 +13,7 @@ const optimizeRoutes: Routes = [
   {
     path: 'home', component: HomeComponent,
     children: [
-      { path: '', redirectTo: 'item', pathMatch: 'full' },
+      { path: '', redirectTo: 'counter', pathMatch: 'full' },
       { path: 'counter', component: CounterComponent },
       { path: 'detection-strategy-demo', component: DetectionStrategyDemoComponent },
       { path: 'zone-demo', component: ZoneDemoComponent },
