@@ -7,8 +7,6 @@ import { OptimizeRoutingModule } from './optimize-routing.module';
 
 // component 
 import { HomeComponent } from './home/home.component';
-import { ItemDetailComponent } from './item-detail/item-detail.component';
-import { ItemMasterComponent } from './item-master/item-master.component';
 import { ZoneDemoComponent } from './zone-demo/zone-demo.component';
 import { DetectorRefDemoComponent } from './detector-ref-demo/detector-ref-demo.component';
 import { CounterComponent } from './counter/counter.component';
@@ -23,8 +21,6 @@ import { FoodListComponent } from './food-list/food-list.component';
   ],
   declarations: [
     HomeComponent,
-    ItemDetailComponent,
-    ItemMasterComponent,
     ZoneDemoComponent,
     DetectorRefDemoComponent,
     CounterComponent,
