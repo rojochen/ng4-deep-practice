@@ -78,6 +78,6 @@ export class LifeParentComponent implements
     });
   }
   getNowTime(): string {
-    return displayTime(new Date(), 'yyyy-MM-dd hh:mm');
+    return displayTime(new Date(), 'yyyy-MM-dd hh:mm:ss');
   }
 }
