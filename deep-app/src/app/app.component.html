@@ -12,6 +12,9 @@
         </div>
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
+                    <li routerLinkActive="active">
+                            <a [routerLink]="['my-observable']">Observable</a>
+                        </li>
                 <li routerLinkActive="active">
                     <a [routerLink]="['form/check-tw-id']">Form</a>
                 </li>
@@ -27,6 +30,7 @@
                 <li routerLinkActive="active">
                     <a [routerLink]="['directive']">Directive</a>
                 </li>
+                
             </ul>
         </div>
     </div>

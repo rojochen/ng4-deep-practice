@@ -7,6 +7,8 @@ import { HomeComponent } from './home/home.component';
 import { DirectiveDemoComponent } from './directive-demo/directive-demo.component';
 import { DirectiveDemoModule } from './directive-demo/directive-demo.module';
 import { Observable } from 'rxjs/Observable';
+import { ObservableDemoModule } from './observable-demo/observable-demo.module';
+import { ObservableDemoRoutingModule } from './observable-demo/observable-demo-routing.module';
 
 // 開啟Hash 模式需要import LocationStrategy & HashLocationStrategy from '@angular/common。
 const openHashConfig = { provide: LocationStrategy, useClass: HashLocationStrategy };
@@ -29,6 +31,7 @@ export class AppCustomPreloader implements PreloadingStrategy {
 // PreloadAllModules 預設全都preload , 只要在首頁執行時，有載入0.chunk.js就是會預先載入，如果不確定的話可以把預先載入的功能移除，二者交互比對就知道了。
 @NgModule({
     imports: [
+        ObservableDemoRoutingModule,
         RouterModule.forRoot(appRoutes, {
             preloadingStrategy: AppCustomPreloader
         }),
@@ -37,10 +40,11 @@ export class AppCustomPreloader implements PreloadingStrategy {
     declarations: [
     ],
     providers: [
-        openHashConfig, AppCustomPreloader
+        openHashConfig,
+        AppCustomPreloader
     ],
     exports: [
         RouterModule
     ]
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
