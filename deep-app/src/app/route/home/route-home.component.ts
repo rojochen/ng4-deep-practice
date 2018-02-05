@@ -32,6 +32,7 @@ export class RouteHomeComponent implements OnInit {
   }
   login(value: any) {
     if (value.username === 'Louis' || value.password === '123456') {
+      // 登入成功的話就在localStorage 存入 login 參數
       localStorage.setItem('login', 'ok');
       this.router.navigate(['/resolve/user']);
     } else {

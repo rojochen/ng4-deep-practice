@@ -14,6 +14,8 @@ export class UserComponent implements OnInit {
 
   ngOnInit() {
     this.userList = [];
+    // 透過resolve 取回的資料 需藉由snapshot 來獲得
+    // src/app/core/service/user.service.ts
     this.userList = this.activatedRoute.snapshot.data['userList'];
   }
   jumpToUserInfo(id: number): void {

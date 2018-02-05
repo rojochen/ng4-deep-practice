@@ -9,6 +9,8 @@ export class AuthGuard implements CanActivate {
   }
   canActivate(route: ActivatedRouteSnapshot, state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
     console.log('AuthGuard#canActivate called');
+
+    // route-home.component.ts 裡面 若user登入成功就 localStorage.setItem('login') = 'ok'
     if(localStorage.getItem('login')) {
       return true;
     } else {
