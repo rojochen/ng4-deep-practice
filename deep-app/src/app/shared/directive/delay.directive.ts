@@ -13,6 +13,7 @@ export class DelayDirective {
   @Input() set appDelay(time: number) {
     setTimeout(() => {
       // viewContainerRef建立裝 embeded view的容器, templateRef創造 embeded view
+      console.log(this.templateRef);
       this.viewContainerRef.createEmbeddedView(this.templateRef);
     }, time);
   }

@@ -15,10 +15,12 @@ export class OutputChildComponent implements OnInit {
   }
   increment() {
     this.count++;
+    // 觸發change event
     this.change.emit(this.count);
   }
   decrement() {
     this.count--;
+    // 觸發change event
     this.change.emit(this.count);
   }
 

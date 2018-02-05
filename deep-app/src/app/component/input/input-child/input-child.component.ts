@@ -7,6 +7,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class InputChildComponent implements OnInit {
   // @Input('value') count: number = 0;
+  // 接受view element 的屬性值
   @Input() value: number;
   count: number;
   constructor() { }
