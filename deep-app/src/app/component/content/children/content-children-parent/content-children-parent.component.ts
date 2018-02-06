@@ -18,10 +18,7 @@ export class ContentChildrenParentComponent implements OnInit, AfterContentInit 
   }
 
   onClickAll() {
-    // this.helloChildren.forEach(child => {
-    //   console.log(child);
-    //   child.randomizeColor();
-    // });
+
     this.helloChildren.forEach(child => child.randomizeColor());
   }
 
